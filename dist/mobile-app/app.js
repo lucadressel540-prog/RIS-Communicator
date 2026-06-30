@@ -111,7 +111,7 @@ let profile = loadProfile();
 let preferences = loadPreferences();
 let dataUpdateInProgress = false;
 let stationSearchTimer = 0;
-let editorDownloadUrl = "";
+let editorDownloadUrl = null;
 let editorDownloadTimer = 0;
 
 function buildDateGroups() {
