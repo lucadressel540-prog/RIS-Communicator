@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.7.11903.348 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{07C2787E-EAC7-C090-1BA3-A61EC2A24D84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RisDataEditor", "tools\RisDataEditor\RisDataEditor.csproj", "{6E4651CE-6F8E-4323-9610-7684A1C5F19B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RisApiProxy", "tools\RisApiProxy\RisApiProxy.csproj", "{8C167BB5-A8DF-4C09-8724-5F7C3BCA7253}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E4651CE-6F8E-4323-9610-7684A1C5F19B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E4651CE-6F8E-4323-9610-7684A1C5F19B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E4651CE-6F8E-4323-9610-7684A1C5F19B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6E4651CE-6F8E-4323-9610-7684A1C5F19B}.Debug|x64.Build.0 = Debug|Any CPU
+		{6E4651CE-6F8E-4323-9610-7684A1C5F19B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6E4651CE-6F8E-4323-9610-7684A1C5F19B}.Debug|x86.Build.0 = Debug|Any CPU
+		{6E4651CE-6F8E-4323-9610-7684A1C5F19B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E4651CE-6F8E-4323-9610-7684A1C5F19B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E4651CE-6F8E-4323-9610-7684A1C5F19B}.Release|x64.ActiveCfg = Release|Any CPU
+		{6E4651CE-6F8E-4323-9610-7684A1C5F19B}.Release|x64.Build.0 = Release|Any CPU
+		{6E4651CE-6F8E-4323-9610-7684A1C5F19B}.Release|x86.ActiveCfg = Release|Any CPU
+		{6E4651CE-6F8E-4323-9610-7684A1C5F19B}.Release|x86.Build.0 = Release|Any CPU
+		{8C167BB5-A8DF-4C09-8724-5F7C3BCA7253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C167BB5-A8DF-4C09-8724-5F7C3BCA7253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C167BB5-A8DF-4C09-8724-5F7C3BCA7253}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8C167BB5-A8DF-4C09-8724-5F7C3BCA7253}.Debug|x64.Build.0 = Debug|Any CPU
+		{8C167BB5-A8DF-4C09-8724-5F7C3BCA7253}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8C167BB5-A8DF-4C09-8724-5F7C3BCA7253}.Debug|x86.Build.0 = Debug|Any CPU
+		{8C167BB5-A8DF-4C09-8724-5F7C3BCA7253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C167BB5-A8DF-4C09-8724-5F7C3BCA7253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C167BB5-A8DF-4C09-8724-5F7C3BCA7253}.Release|x64.ActiveCfg = Release|Any CPU
+		{8C167BB5-A8DF-4C09-8724-5F7C3BCA7253}.Release|x64.Build.0 = Release|Any CPU
+		{8C167BB5-A8DF-4C09-8724-5F7C3BCA7253}.Release|x86.ActiveCfg = Release|Any CPU
+		{8C167BB5-A8DF-4C09-8724-5F7C3BCA7253}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6E4651CE-6F8E-4323-9610-7684A1C5F19B} = {07C2787E-EAC7-C090-1BA3-A61EC2A24D84}
+		{8C167BB5-A8DF-4C09-8724-5F7C3BCA7253} = {07C2787E-EAC7-C090-1BA3-A61EC2A24D84}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3A18568-930C-42CE-91DB-A8A6180B5648}
+	EndGlobalSection
+EndGlobal

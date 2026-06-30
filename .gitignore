@@ -1,0 +1,8 @@
+bin/
+obj/
+.vs/
+tools/RisApiProxy/appsettings.local.json
+cloudflare.publish.local.json
+data/ris-editor.db
+data/ris-editor.db-*
+*.user

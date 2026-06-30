@@ -1,0 +1,383 @@
+@font-face {
+  font-family: "DBRIS";
+  src: url("../assets/fonts/DBRISpos.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --tft-blue: #26315f;
+  --tft-blue-deep: #26315f;
+  --tft-head: #182046;
+  --tft-head-dark: #182046;
+  --tft-white: #f6f6fb;
+  --tft-text: #f5f6ff;
+  --tft-ink: #111a4f;
+  --tft-line: #f2f2fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  background: #000;
+  color: var(--tft-text);
+  font-family: "DBRIS", Arial, sans-serif;
+  letter-spacing: 0;
+}
+
+.monitor-stage {
+  width: 100vw;
+  height: 100vh;
+  padding: clamp(8px, 1.4vw, 18px);
+  display: grid;
+  place-items: center;
+  background: #000;
+}
+
+.monitor-shell {
+  position: relative;
+  width: min(96vw, calc((100vh - 24px) * 1.771), 1368px);
+  aspect-ratio: 1.771 / 1;
+  background: #000;
+}
+
+.monitor-shell::before,
+.monitor-shell::after {
+  content: none;
+}
+
+.tft-screen {
+  position: relative;
+  display: grid;
+  container-type: inline-size;
+  grid-template-rows: 25.2% 27.4% 47.4%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 2px solid #050508;
+  background: var(--tft-blue);
+}
+
+.tft-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  padding: 1.65cqw 1.45cqw 0.65cqw;
+  background: var(--tft-head);
+}
+
+.train-title {
+  min-width: 0;
+}
+
+.train-number {
+  display: flex;
+  align-items: baseline;
+  gap: 0.22em;
+  color: var(--tft-text);
+  font-size: 4.45cqw;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.train-route {
+  margin-top: 0.42cqw;
+  max-width: 72cqw;
+  color: #eef0ff;
+  font-size: 2.15cqw;
+  font-weight: 400;
+  line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.clock-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.48cqw;
+  color: #eef0ff;
+  font-size: 4.35cqw;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.clock-icon {
+  position: relative;
+  width: 3.65cqw;
+  height: 3.65cqw;
+  border: 0.17cqw solid #eef0ff;
+  border-radius: 50%;
+}
+
+.clock-icon::before,
+.clock-icon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.2cqw;
+  border-radius: 999px;
+  background: #eef0ff;
+  transform-origin: 50% 100%;
+}
+
+.clock-icon::before {
+  height: 1.65cqw;
+  transform: translate(-50%, -100%);
+}
+
+.clock-icon::after {
+  height: 1.65cqw;
+  transform: translate(-50%, -100%) rotate(128deg);
+}
+
+.station-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.2cqw 4cqw 0.95cqw 24.5cqw;
+  background: var(--tft-white);
+  color: var(--tft-ink);
+  text-align: left;
+}
+
+.station-label {
+  min-height: 0;
+  margin-bottom: 2px;
+  color: var(--tft-ink);
+  font-size: 0;
+  line-height: 1;
+}
+
+.station-label:not(:empty) {
+  margin-bottom: 0.2cqw;
+  font-size: 2.1cqw;
+}
+
+.station-panel h1 {
+  margin: 0;
+  color: var(--tft-ink);
+  font-size: 5.0cqw;
+  font-weight: 700;
+  line-height: 0.95;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.station-panel h1.is-long {
+  font-size: 3.95cqw;
+}
+
+.station-panel h1.is-very-long {
+  font-size: 3.1cqw;
+}
+
+.station-panel p {
+  margin: 0.48cqw 0 0;
+  color: #152052;
+  font-size: 2.55cqw;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.route-panel {
+  display: grid;
+  grid-template-columns: 20.7% 2.2% minmax(0, 1fr);
+  padding: 0 2.4cqw 1.05cqw 1.65cqw;
+  background: var(--tft-blue);
+  overflow: hidden;
+}
+
+.route-times {
+  padding-top: 4.2cqw;
+  text-align: right;
+}
+
+.route-rail {
+  position: relative;
+  padding-top: 0;
+}
+
+.rail-rows {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  padding-top: 4.2cqw;
+}
+
+.rail-rows::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -4.2cqw;
+  bottom: 1.7cqw;
+  width: 0.12cqw;
+  transform: translateX(-50%);
+  background: var(--tft-line);
+}
+
+.rail-row {
+  position: relative;
+  min-height: 3.18cqw;
+}
+
+.rail-marker {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1.1cqw;
+  height: 1.1cqw;
+  transform: translate(-50%, -50%);
+  background: var(--tft-line);
+  border-radius: 0;
+}
+
+.rail-row.final {
+  margin-top: 0;
+}
+
+.route-stops {
+  min-width: 0;
+  padding-left: 2.95cqw;
+}
+
+.route-caption {
+  height: 4.2cqw;
+  color: #fff;
+  font-size: 1.65cqw;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+#routeRows {
+  display: grid;
+  gap: 0;
+}
+
+.route-time,
+.route-stop {
+  min-height: 3.18cqw;
+  font-size: 2.8cqw;
+  line-height: 3.18cqw;
+}
+
+.route-time {
+  color: #eef0ff;
+  white-space: nowrap;
+}
+
+.route-stop {
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.route-stop.final,
+.route-time.final {
+  margin-top: 0;
+}
+
+.tft-controls {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  z-index: 3;
+  display: flex;
+  gap: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 140ms ease;
+}
+
+.tft-screen:hover .tft-controls {
+  opacity: 0.78;
+  pointer-events: auto;
+}
+
+.tft-controls select,
+.tft-controls button {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(0, 0, 0, 0.58);
+  color: #fff;
+  font: 12px Arial, sans-serif;
+  padding: 5px 8px;
+}
+
+.is-waiting .route-times,
+.is-waiting .route-rail,
+.is-waiting .route-stops {
+  opacity: 0;
+}
+
+.is-waiting .station-panel {
+  padding-left: 22px;
+  text-align: center;
+}
+
+.is-waiting .station-panel h1 {
+  font-size: 22px;
+}
+
+.is-waiting .station-panel p {
+  font-size: 13px;
+}
+
+@media (max-width: 520px), (max-height: 420px) {
+  .tft-header {
+    padding: 12px 15px 8px;
+  }
+
+  .train-number,
+  .clock-wrap {
+    font-size: 20px;
+  }
+
+  .clock-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .train-route {
+    max-width: 210px;
+    font-size: 13px;
+  }
+
+  .station-panel {
+    padding-left: 76px;
+  }
+
+  .station-panel h1 {
+    font-size: 19px;
+  }
+
+  .station-panel p {
+    font-size: 12px;
+  }
+
+  .route-panel {
+    padding: 6px 14px 9px 14px;
+  }
+
+  .route-time,
+  .route-stop {
+    min-height: 17px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

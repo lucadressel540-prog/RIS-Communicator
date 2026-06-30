@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>RIS TFT</title>
+  <link rel="stylesheet" href="./tft.css">
+</head>
+<body>
+  <main class="monitor-stage">
+    <section class="monitor-shell" aria-label="Fahrgastinformationsmonitor">
+      <div id="tftScreen" class="tft-screen is-waiting">
+        <header class="tft-header">
+          <div class="train-title">
+            <div class="train-number">
+              <span id="trainLine">RIS</span>
+              <span id="trainNumber"></span>
+            </div>
+            <div class="train-route">
+              <span id="trainOrigin"></span>
+              <span id="routeSeparator"></span>
+              <span id="trainDestination"></span>
+            </div>
+          </div>
+          <div class="clock-wrap" aria-label="Uhrzeit">
+            <span class="clock-icon" aria-hidden="true"></span>
+            <span id="uhr">00:00</span>
+          </div>
+        </header>
+
+        <section class="station-panel">
+          <div id="centerLabel" class="station-label"></div>
+          <h1 id="centerStation">Bitte einbuchen</h1>
+          <p id="centerSubline"></p>
+        </section>
+
+        <section class="route-panel">
+          <div class="route-times" id="routeTimes"></div>
+          <div class="route-rail" id="routeRail"></div>
+          <div class="route-stops">
+            <div class="route-caption" id="routeCaption">Weiterfahrt nach:</div>
+            <div id="routeRows"></div>
+          </div>
+        </section>
+
+        <div class="tft-controls" aria-label="TFT Steuerung">
+          <select id="trainSelect" aria-label="Zug auswählen"></select>
+          <button type="button" id="prevStop">Zurück</button>
+          <button type="button" id="nextStop">Weiter</button>
+          <button type="button" id="fullscreenButton">Vollbild</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./tft.js"></script>
+</body>
+</html>

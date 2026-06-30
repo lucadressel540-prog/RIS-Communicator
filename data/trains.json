@@ -1,0 +1,2963 @@
+[
+  {
+    "number": "4898",
+    "line": "RE31",
+    "from": "Hof Hbf",
+    "to": "Pegnitz",
+    "duration": "1 h 6 min",
+    "stops": [
+      [
+        "Hof Hbf",
+        "",
+        "04:21",
+        "4"
+      ],
+      [
+        "Marktredwitz",
+        "04:42",
+        "04:43",
+        "5"
+      ],
+      [
+        "Waldershof",
+        "04:45",
+        "04:46",
+        "2"
+      ],
+      [
+        "Neusorg",
+        "04:51",
+        "04:52",
+        "2"
+      ],
+      [
+        "Immenreuth",
+        "04:58",
+        "04:59",
+        "2"
+      ],
+      [
+        "Haidenaab-G\u00F6ppmannsb\u00FChl",
+        "05:02",
+        "05:04",
+        "1"
+      ],
+      [
+        "Kirchenlaibach",
+        "05:08",
+        "05:11",
+        "2"
+      ],
+      [
+        "Schnabelwaid",
+        "05:20",
+        "05:21",
+        "1"
+      ],
+      [
+        "Pegnitz",
+        "05:27",
+        "",
+        "2"
+      ]
+    ]
+  },
+  {
+    "number": "3454",
+    "line": "RE40",
+    "from": "Hof Hbf",
+    "to": "N\u00FCrnberg Hbf",
+    "duration": "2 h 18 min",
+    "stops": [
+      [
+        "Hof Hbf",
+        "",
+        "05:00",
+        "6"
+      ],
+      [
+        "Oberkotzau",
+        "05:05",
+        "05:05",
+        "5"
+      ],
+      [
+        "Marktredwitz",
+        "05:26",
+        "05:26",
+        "5"
+      ],
+      [
+        "Altenstadt(Waldnaab)",
+        "05:57",
+        "05:57",
+        "2"
+      ],
+      [
+        "Weiden(Oberpf)",
+        "06:02",
+        "06:05",
+        "4"
+      ],
+      [
+        "Weiherhammer",
+        "06:11",
+        "06:11",
+        "2"
+      ],
+      [
+        "Freihung",
+        "06:18",
+        "06:24",
+        "2"
+      ],
+      [
+        "Vilseck",
+        "06:29",
+        "06:30",
+        "2"
+      ],
+      [
+        "Neukirchen(b Sulzb)",
+        "06:43",
+        "06:46",
+        "2"
+      ],
+      [
+        "Etzelwang",
+        "06:48",
+        "06:49",
+        "1"
+      ],
+      [
+        "Hartmannshof",
+        "06:54",
+        "06:55",
+        "2"
+      ],
+      [
+        "Hersbruck(r Pegnitz)",
+        "07:02",
+        "07:03",
+        "3"
+      ],
+      [
+        "N\u00FCrnberg Hbf",
+        "07:18",
+        "",
+        "17"
+      ]
+    ]
+  },
+  {
+    "number": "20871",
+    "line": "RB95",
+    "from": "Hof Hbf",
+    "to": "Marktredwitz",
+    "duration": "1 h 55 min",
+    "stops": [
+      [
+        "Hof Hbf",
+        "",
+        "05:03",
+        "2"
+      ],
+      [
+        "Oberkotzau",
+        "05:09",
+        "05:09",
+        "2"
+      ],
+      [
+        "Wurlitz",
+        "05:14",
+        "05:14",
+        "1"
+      ],
+      [
+        "Rehau",
+        "05:18",
+        "05:19",
+        "1"
+      ],
+      [
+        "Sch\u00F6nwald(Oberfr)",
+        "05:28",
+        "05:28",
+        "1"
+      ],
+      [
+        "Selb-Pl\u00F6\u00DFberg",
+        "05:31",
+        "05:33",
+        "1"
+      ],
+      [
+        "As(CZ)",
+        "05:40",
+        "05:46",
+        ""
+      ],
+      [
+        "Hazlov",
+        "05:55",
+        "05:56",
+        ""
+      ],
+      [
+        "Vojtanov obec",
+        "05:59",
+        "05:59",
+        ""
+      ],
+      [
+        "Franti\u0161kovy L\u00E1zn\u011B",
+        "06:08",
+        "06:09",
+        ""
+      ],
+      [
+        "Frantiskovy Lazne Aquaforum",
+        "06:10",
+        "06:10",
+        ""
+      ],
+      [
+        "Cheb",
+        "06:16",
+        "06:31",
+        ""
+      ],
+      [
+        "Cheb-Skalka",
+        "06:35",
+        "06:35",
+        ""
+      ],
+      [
+        "Pomezi nad Ohri",
+        "06:39",
+        "06:39",
+        ""
+      ],
+      [
+        "Schirnding",
+        "06:43",
+        "06:44",
+        "1"
+      ],
+      [
+        "Arzberg(Oberfr)",
+        "06:48",
+        "06:48",
+        "3"
+      ],
+      [
+        "Marktredwitz",
+        "06:58",
+        "",
+        "5"
+      ]
+    ]
+  },
+  {
+    "number": "3000",
+    "line": "RE35",
+    "from": "Hof Hbf",
+    "to": "Bamberg",
+    "duration": "1 h 53 min",
+    "stops": [
+      [
+        "Hof Hbf",
+        "",
+        "05:21",
+        "2"
+      ],
+      [
+        "Oberkotzau",
+        "05:26",
+        "05:27",
+        "5"
+      ],
+      [
+        "Schwarzenbach(Saale)",
+        "05:31",
+        "05:31",
+        "1"
+      ],
+      [
+        "M\u00FCnchberg",
+        "05:40",
+        "05:41",
+        "2"
+      ],
+      [
+        "Stammbach",
+        "05:48",
+        "05:49",
+        "3"
+      ],
+      [
+        "Marktschorgast",
+        "05:57",
+        "06:04",
+        "1"
+      ],
+      [
+        "Neuenmarkt-Wirsberg",
+        "06:10",
+        "06:16",
+        "5"
+      ],
+      [
+        "Untersteinach(b Stadtsteinach)",
+        "06:21",
+        "06:21",
+        "1"
+      ],
+      [
+        "Kulmbach",
+        "06:25",
+        "06:26",
+        "3"
+      ],
+      [
+        "Mainleus",
+        "06:30",
+        "06:30",
+        "2"
+      ],
+      [
+        "Burgkunstadt",
+        "06:36",
+        "06:37",
+        "1"
+      ],
+      [
+        "Hochstadt-Marktzeuln",
+        "06:41",
+        "06:41",
+        "3"
+      ],
+      [
+        "Lichtenfels",
+        "06:46",
+        "06:47",
+        "5"
+      ],
+      [
+        "Bad Staffelstein",
+        "06:51",
+        "06:52",
+        "2"
+      ],
+      [
+        "Ebensfeld",
+        "06:56",
+        "06:57",
+        "2"
+      ],
+      [
+        "Zapfendorf",
+        "07:01",
+        "07:01",
+        "2"
+      ],
+      [
+        "Ebing",
+        "07:03",
+        "07:04",
+        "2"
+      ],
+      [
+        "Bamberg",
+        "07:14",
+        "",
+        "4"
+      ]
+    ]
+  },
+  {
+    "number": "3020",
+    "line": "RE30",
+    "from": "Hof Hbf",
+    "to": "Pegnitz",
+    "duration": "1 h 21 min",
+    "stops": [
+      [
+        "Hof Hbf",
+        "",
+        "05:21",
+        "2"
+      ],
+      [
+        "Oberkotzau",
+        "05:26",
+        "05:27",
+        "5"
+      ],
+      [
+        "Schwarzenbach(Saale)",
+        "05:31",
+        "05:31",
+        "1"
+      ],
+      [
+        "M\u00FCnchberg",
+        "05:40",
+        "05:41",
+        "2"
+      ],
+      [
+        "Stammbach",
+        "05:48",
+        "05:49",
+        "3"
+      ],
+      [
+        "Marktschorgast",
+        "05:57",
+        "05:59",
+        "1"
+      ],
+      [
+        "Trebgast",
+        "06:07",
+        "06:10",
+        "2"
+      ],
+      [
+        "Bayreuth Hbf",
+        "06:20",
+        "06:24",
+        "2"
+      ],
+      [
+        "Creu\u00DFen(Oberfr)",
+        "06:33",
+        "06:33",
+        "1"
+      ],
+      [
+        "Pegnitz",
+        "06:42",
+        "",
+        "3"
+      ]
+    ]
+  },
+  {
+    "number": "80201",
+    "line": "RB2",
+    "from": "Zwickau(Sachs)Hbf",
+    "to": "Hof Hbf",
+    "duration": "1 h 31 min",
+    "stops": [
+      [
+        "Zwickau(Sachs)Hbf",
+        "",
+        "03:39",
+        "2"
+      ],
+      [
+        "Lichtentanne(Sachs)",
+        "03:42",
+        "03:42",
+        "1"
+      ],
+      [
+        "Steinpleis",
+        "03:44",
+        "03:44",
+        "1"
+      ],
+      [
+        "Werdau",
+        "03:47",
+        "03:57",
+        "1"
+      ],
+      [
+        "Neumark(Sachs)",
+        "04:00",
+        "04:00",
+        "2"
+      ],
+      [
+        "Reichenbach(Vogtl)",
+        "04:06",
+        "04:07",
+        "4"
+      ],
+      [
+        "Netzschkau",
+        "04:11",
+        "04:11",
+        "2"
+      ],
+      [
+        "Limbach(Vogtl)",
+        "04:14",
+        "04:14",
+        "2"
+      ],
+      [
+        "Herlasgr\u00FCn",
+        "04:16",
+        "04:16",
+        "2"
+      ],
+      [
+        "Ruppertsgr\u00FCn",
+        "04:20",
+        "04:20",
+        "2"
+      ],
+      [
+        "Jocketa",
+        "04:22",
+        "04:22",
+        "2"
+      ],
+      [
+        "J\u00F6\u00DFnitz",
+        "04:25",
+        "04:25",
+        "2"
+      ],
+      [
+        "Plauen(Vogtl) ob Bf",
+        "04:29",
+        "04:31",
+        "4"
+      ],
+      [
+        "Syrau",
+        "04:35",
+        "04:36",
+        "2"
+      ],
+      [
+        "Mehltheuer",
+        "04:40",
+        "04:40",
+        "2"
+      ],
+      [
+        "Sch\u00F6nberg(Vogtl)",
+        "04:45",
+        "04:45",
+        "2"
+      ],
+      [
+        "Reuth(b Plauen,Vogtl)",
+        "04:50",
+        "04:50",
+        "2"
+      ],
+      [
+        "Grobau",
+        "04:55",
+        "04:55",
+        "2"
+      ],
+      [
+        "Gutenf\u00FCrst",
+        "04:57",
+        "04:57",
+        "2"
+      ],
+      [
+        "Feilitzsch",
+        "05:01",
+        "05:02",
+        "1"
+      ],
+      [
+        "Hof Hbf",
+        "05:10",
+        "",
+        "1b"
+      ]
+    ]
+  },
+  {
+    "number": "74005",
+    "line": "RE3",
+    "from": "Hof Hbf",
+    "to": "Dresden-Neustadt",
+    "duration": "2 h 55 min",
+    "stops": [
+      [
+        "Hof Hbf",
+        "",
+        "05:28",
+        "6b"
+      ],
+      [
+        "Plauen(Vogtl) ob Bf",
+        "05:59",
+        "06:00",
+        "3"
+      ],
+      [
+        "Reichenbach(Vogtl)",
+        "06:15",
+        "06:16",
+        "3"
+      ],
+      [
+        "Zwickau(Sachs)Hbf",
+        "06:31",
+        "06:32",
+        "3"
+      ],
+      [
+        "Glauchau(Sachs)",
+        "06:41",
+        "06:42",
+        "2"
+      ],
+      [
+        "Hohenstein-Ernstthal",
+        "06:50",
+        "06:51",
+        "2"
+      ],
+      [
+        "Chemnitz Hbf",
+        "07:03",
+        "07:04",
+        "10"
+      ],
+      [
+        "Fl\u00F6ha",
+        "07:13",
+        "07:14",
+        "4"
+      ],
+      [
+        "Freiberg(Sachs)",
+        "07:31",
+        "07:31",
+        "2"
+      ],
+      [
+        "Tharandt",
+        "07:51",
+        "07:53",
+        "3"
+      ],
+      [
+        "Freital-Hainsberg West",
+        "07:56",
+        "07:56",
+        "1"
+      ],
+      [
+        "Freital-Hainsberg",
+        "07:58",
+        "07:58",
+        "1"
+      ],
+      [
+        "Freital-Deuben",
+        "08:00",
+        "08:00",
+        "1"
+      ],
+      [
+        "Freital-Potschappel",
+        "08:03",
+        "08:03",
+        "1"
+      ],
+      [
+        "Dresden-Plauen",
+        "08:07",
+        "08:09",
+        "1"
+      ],
+      [
+        "Dresden-Neustadt",
+        "08:23",
+        "",
+        "6"
+      ]
+    ]
+  },
+  {
+    "number": "84537",
+    "line": "RB97",
+    "from": "Hof Hbf",
+    "to": "Bad Steben",
+    "duration": "0 h 43 min",
+    "stops": [
+      [
+        "Hof Hbf",
+        "",
+        "05:31",
+        "2b"
+      ],
+      [
+        "Hof-Neuhof",
+        "05:33",
+        "05:34",
+        "1"
+      ],
+      [
+        "K\u00F6ditz",
+        "05:40",
+        "05:40",
+        "1"
+      ],
+      [
+        "Stegenwaldhaus",
+        "05:45",
+        "05:45",
+        "1"
+      ],
+      [
+        "Rothenb\u00FCrg",
+        "05:48",
+        "05:48",
+        "1"
+      ],
+      [
+        "Selbitz",
+        "05:52",
+        "05:54",
+        "2"
+      ],
+      [
+        "Naila",
+        "05:58",
+        "05:58",
+        "1"
+      ],
+      [
+        "Marxgr\u00FCn",
+        "06:06",
+        "06:07",
+        "1"
+      ],
+      [
+        "H\u00F6llenthal",
+        "06:09",
+        "06:09",
+        "1"
+      ],
+      [
+        "Bad Steben",
+        "06:14",
+        "",
+        "1"
+      ]
+    ]
+  },
+  {
+    "number": "79864",
+    "line": "RE23",
+    "from": "Hof Hbf",
+    "to": "M\u00FCnchen Hbf",
+    "duration": "3 h 46 min",
+    "stops": [
+      [
+        "Hof Hbf",
+        "",
+        "05:34",
+        "6a"
+      ],
+      [
+        "Marktredwitz",
+        "05:59",
+        "06:00",
+        "4"
+      ],
+      [
+        "Wiesau(Oberpf)",
+        "06:12",
+        "06:13",
+        "2"
+      ],
+      [
+        "Altenstadt(Waldnaab)",
+        "06:37",
+        "06:38",
+        "2"
+      ],
+      [
+        "Weiden(Oberpf)",
+        "06:42",
+        "06:45",
+        "2"
+      ],
+      [
+        "Schwandorf",
+        "07:10",
+        "07:11",
+        "4"
+      ],
+      [
+        "Maxh\u00FCtte-Haidhof",
+        "07:20",
+        "07:21",
+        "1"
+      ],
+      [
+        "Regenstauf",
+        "07:30",
+        "07:31",
+        "3"
+      ],
+      [
+        "Regensburg Hbf",
+        "07:43",
+        "07:51",
+        "4"
+      ],
+      [
+        "Neufahrn(Niederbay)",
+        "08:15",
+        "08:16",
+        "1"
+      ],
+      [
+        "Landshut(Bay)Hbf",
+        "08:30",
+        "08:32",
+        "6"
+      ],
+      [
+        "Freising",
+        "08:50",
+        "08:51",
+        "2"
+      ],
+      [
+        "M\u00FCnchen Hbf",
+        "09:20",
+        "",
+        "24"
+      ]
+    ]
+  },
+  {
+    "number": "84483",
+    "line": "RB98",
+    "from": "Helmbrechts",
+    "to": "Hof Hbf",
+    "duration": "0 h 40 min",
+    "stops": [
+      [
+        "Helmbrechts",
+        "",
+        "05:00",
+        "1"
+      ],
+      [
+        "W\u00FCstenselbitz",
+        "05:03",
+        "05:03",
+        "1"
+      ],
+      [
+        "Hildbrandsgr\u00FCn",
+        "05:06",
+        "05:06",
+        "1"
+      ],
+      [
+        "Unfriedsdorf",
+        "05:09",
+        "05:09",
+        "1"
+      ],
+      [
+        "M\u00FCnchberg",
+        "05:15",
+        "05:16",
+        "3"
+      ],
+      [
+        "Seulbitz",
+        "05:21",
+        "05:21",
+        "2"
+      ],
+      [
+        "F\u00F6rbau",
+        "05:26",
+        "05:26",
+        "2"
+      ],
+      [
+        "Schwarzenbach(Saale)",
+        "05:29",
+        "05:29",
+        "2"
+      ],
+      [
+        "Oberkotzau",
+        "05:34",
+        "05:34",
+        "4"
+      ],
+      [
+        "Hof Hbf",
+        "05:40",
+        "",
+        "4"
+      ]
+    ]
+  },
+  {
+    "number": "84691",
+    "line": "RB96",
+    "from": "Hof Hbf",
+    "to": "Selb Stadt",
+    "duration": "0 h 38 min",
+    "stops": [
+      [
+        "Hof Hbf",
+        "",
+        "05:44",
+        "8"
+      ],
+      [
+        "Oberkotzau",
+        "05:49",
+        "05:50",
+        "2"
+      ],
+      [
+        "Wurlitz",
+        "05:54",
+        "05:54",
+        "1"
+      ],
+      [
+        "Rehau",
+        "05:59",
+        "06:01",
+        "1"
+      ],
+      [
+        "Sch\u00F6nwald(Oberfr)",
+        "06:10",
+        "06:10",
+        "1"
+      ],
+      [
+        "Selb-Pl\u00F6\u00DFberg",
+        "06:13",
+        "06:15",
+        "1"
+      ],
+      [
+        "Erkersreuth",
+        "06:17",
+        "06:18",
+        "1"
+      ],
+      [
+        "Selb Nord",
+        "06:19",
+        "06:20",
+        "1"
+      ],
+      [
+        "Selb Stadt",
+        "06:22",
+        "",
+        "1"
+      ]
+    ]
+  },
+  {
+    "number": "84539",
+    "line": "RB97",
+    "from": "Marktredwitz",
+    "to": "Hof Hbf",
+    "duration": "0 h 35 min",
+    "stops": [
+      [
+        "Marktredwitz",
+        "",
+        "05:10",
+        "1"
+      ],
+      [
+        "Wunsiedel-Holenbrunn",
+        "05:15",
+        "05:15",
+        "2"
+      ],
+      [
+        "R\u00F6slau",
+        "05:19",
+        "05:19",
+        "2"
+      ],
+      [
+        "Marktleuthen",
+        "05:24",
+        "05:24",
+        "2"
+      ],
+      [
+        "Kirchenlamitz Ost",
+        "05:28",
+        "05:28",
+        "1"
+      ],
+      [
+        "Martinlamitz",
+        "05:33",
+        "05:33",
+        "1"
+      ],
+      [
+        "Oberkotzau",
+        "05:38",
+        "05:38",
+        "3"
+      ],
+      [
+        "Hof Hbf",
+        "05:45",
+        "",
+        "2"
+      ]
+    ]
+  },
+  {
+    "number": "84486",
+    "line": "RB99",
+    "from": "Hof Hbf",
+    "to": "Neuenmarkt-Wirsberg",
+    "duration": "0 h 56 min",
+    "stops": [
+      [
+        "Hof Hbf",
+        "",
+        "05:47",
+        "4"
+      ],
+      [
+        "Oberkotzau",
+        "05:52",
+        "05:53",
+        "5"
+      ],
+      [
+        "Schwarzenbach(Saale)",
+        "05:58",
+        "05:59",
+        "1"
+      ],
+      [
+        "F\u00F6rbau",
+        "06:02",
+        "06:02",
+        "1"
+      ],
+      [
+        "Seulbitz",
+        "06:08",
+        "06:08",
+        "1"
+      ],
+      [
+        "M\u00FCnchberg",
+        "06:14",
+        "06:14",
+        "2"
+      ],
+      [
+        "Stammbach",
+        "06:24",
+        "06:25",
+        "3"
+      ],
+      [
+        "Marktschorgast",
+        "06:35",
+        "06:36",
+        "1"
+      ],
+      [
+        "Neuenmarkt-Wirsberg",
+        "06:43",
+        "",
+        "3"
+      ]
+    ]
+  },
+  {
+    "number": "80200",
+    "line": "RB2",
+    "from": "Hof Hbf",
+    "to": "Zwickau(Sachs)Hbf",
+    "duration": "1 h 33 min",
+    "stops": [
+      [
+        "Hof Hbf",
+        "",
+        "05:48",
+        "1b"
+      ],
+      [
+        "Feilitzsch",
+        "05:54",
+        "05:54",
+        "2"
+      ],
+      [
+        "Gutenf\u00FCrst",
+        "05:59",
+        "05:59",
+        "1"
+      ],
+      [
+        "Grobau",
+        "06:01",
+        "06:01",
+        "1"
+      ],
+      [
+        "Reuth(b Plauen,Vogtl)",
+        "06:06",
+        "06:06",
+        "1"
+      ],
+      [
+        "Sch\u00F6nberg(Vogtl)",
+        "06:11",
+        "06:11",
+        "1"
+      ],
+      [
+        "Mehltheuer",
+        "06:16",
+        "06:16",
+        "1"
+      ],
+      [
+        "Syrau",
+        "06:20",
+        "06:20",
+        "1"
+      ],
+      [
+        "Plauen(Vogtl) ob Bf",
+        "06:26",
+        "06:32",
+        "4"
+      ],
+      [
+        "J\u00F6\u00DFnitz",
+        "06:35",
+        "06:35",
+        "1"
+      ],
+      [
+        "Jocketa",
+        "06:38",
+        "06:38",
+        "1"
+      ],
+      [
+        "Ruppertsgr\u00FCn",
+        "06:41",
+        "06:41",
+        "1"
+      ],
+      [
+        "Herlasgr\u00FCn",
+        "06:44",
+        "06:44",
+        "1"
+      ],
+      [
+        "Limbach(Vogtl)",
+        "06:46",
+        "06:46",
+        "1"
+      ],
+      [
+        "Netzschkau",
+        "06:50",
+        "06:50",
+        "1"
+      ],
+      [
+        "Reichenbach(Vogtl)",
+        "06:54",
+        "06:55",
+        "3"
+      ],
+      [
+        "Neumark(Sachs)",
+        "07:01",
+        "07:01",
+        "1"
+      ],
+      [
+        "Werdau",
+        "07:08",
+        "07:12",
+        "1"
+      ],
+      [
+        "Steinpleis",
+        "07:15",
+        "07:15",
+        "1"
+      ],
+      [
+        "Lichtentanne(Sachs)",
+        "07:17",
+        "07:17",
+        "2"
+      ],
+      [
+        "Zwickau(Sachs)Hbf",
+        "07:21",
+        "",
+        "6"
+      ]
+    ]
+  },
+  {
+    "number": "84546",
+    "line": "RB97",
+    "from": "Hof Hbf",
+    "to": "Bayreuth Hbf",
+    "duration": "1 h 23 min",
+    "stops": [
+      [
+        "Hof Hbf",
+        "",
+        "05:51",
+        "2"
+      ],
+      [
+        "Oberkotzau",
+        "05:56",
+        "05:57",
+        "5"
+      ],
+      [
+        "Martinlamitz",
+        "06:01",
+        "06:01",
+        "2"
+      ],
+      [
+        "Kirchenlamitz Ost",
+        "06:06",
+        "06:07",
+        "2"
+      ],
+      [
+        "Marktleuthen",
+        "06:10",
+        "06:11",
+        "1"
+      ],
+      [
+        "R\u00F6slau",
+        "06:15",
+        "06:16",
+        "1"
+      ],
+      [
+        "Wunsiedel-Holenbrunn",
+        "06:19",
+        "06:19",
+        "1"
+      ],
+      [
+        "Marktredwitz",
+        "06:25",
+        "06:30",
+        "5"
+      ],
+      [
+        "Waldershof",
+        "06:33",
+        "06:33",
+        "2"
+      ],
+      [
+        "Neusorg",
+        "06:38",
+        "06:39",
+        "2"
+      ],
+      [
+        "Immenreuth",
+        "06:46",
+        "06:46",
+        "2"
+      ],
+      [
+        "Haidenaab-G\u00F6ppmannsb\u00FChl",
+        "06:49",
+        "06:49",
+        "1"
+      ],
+      [
+        "Kirchenlaibach",
+        "06:53",
+        "06:58",
+        "2"
+      ],
+      [
+        "Seybothenreuth",
+        "07:03",
+        "07:03",
+        "1"
+      ],
+      [
+        "Stockau",
+        "07:07",
+        "07:07",
+        "2"
+      ],
+      [
+        "Bayreuth Hbf",
+        "07:14",
+        "",
+        "1"
+      ]
+    ]
+  },
+  {
+    "number": "3456",
+    "line": "RE41",
+    "from": "Hof Hbf",
+    "to": "N\u00FCrnberg Hbf",
+    "duration": "2 h 10 min",
+    "stops": [
+      [
+        "Hof Hbf",
+        "",
+        "06:05",
+        "6"
+      ],
+      [
+        "Oberkotzau",
+        "06:10",
+        "06:10",
+        "5"
+      ],
+      [
+        "Marktredwitz",
+        "06:31",
+        "06:31",
+        "1"
+      ],
+      [
+        "Weiden(Oberpf)",
+        "07:00",
+        "07:01",
+        "4"
+      ],
+      [
+        "Weiherhammer",
+        "07:08",
+        "07:08",
+        "1"
+      ],
+      [
+        "Freihung",
+        "07:15",
+        "07:16",
+        "2"
+      ],
+      [
+        "Vilseck",
+        "07:22",
+        "07:25",
+        "1"
+      ],
+      [
+        "Neukirchen(b Sulzb)",
+        "07:37",
+        "07:43",
+        "2"
+      ],
+      [
+        "Etzelwang",
+        "07:45",
+        "07:46",
+        "1"
+      ],
+      [
+        "Hartmannshof",
+        "07:50",
+        "07:51",
+        "2"
+      ],
+      [
+        "Hersbruck(r Pegnitz)",
+        "07:58",
+        "07:59",
+        "3"
+      ],
+      [
+        "N\u00FCrnberg Hbf",
+        "08:15",
+        "",
+        "21"
+      ]
+    ]
+  },
+  {
+    "number": "21970",
+    "line": "RB95",
+    "from": "Schwarzenberg(Erzg)",
+    "to": "Zwickau(Sachs)Hbf",
+    "duration": "0 h 45 min",
+    "stops": [
+      [
+        "Schwarzenberg(Erzg)",
+        "",
+        "03:54",
+        "1"
+      ],
+      [
+        "Schwarzenberg-Neuwelt",
+        "03:56",
+        "03:57",
+        "1"
+      ],
+      [
+        "Lauter(Sachs)",
+        "03:59",
+        "04:00",
+        "1"
+      ],
+      [
+        "Aue(Sachs)",
+        "04:06",
+        "04:07",
+        "2"
+      ],
+      [
+        "Bad Schlema",
+        "04:10",
+        "04:11",
+        "2"
+      ],
+      [
+        "Hartenstein",
+        "04:15",
+        "04:16",
+        "1"
+      ],
+      [
+        "F\u00E4hrbr\u00FCcke",
+        "04:19",
+        "04:20",
+        "2"
+      ],
+      [
+        "Wiesenburg(Sachs)",
+        "04:24",
+        "04:24",
+        "1"
+      ],
+      [
+        "Silberstra\u00DFe",
+        "04:26",
+        "04:27",
+        "1"
+      ],
+      [
+        "Wilkau-Ha\u00DFlau",
+        "04:30",
+        "04:30",
+        "1"
+      ],
+      [
+        "Cainsdorf",
+        "04:33",
+        "04:33",
+        "1"
+      ],
+      [
+        "Zwickau-Schedewitz",
+        "04:35",
+        "04:35",
+        "1"
+      ],
+      [
+        "Zwickau(Sachs)Hbf",
+        "04:39",
+        "",
+        "7"
+      ]
+    ]
+  },
+  {
+    "number": "41970",
+    "line": "Bus RB95",
+    "from": "F\u00E4hrbr\u00FCcke",
+    "to": "Hauptbahnhof, Zwickau",
+    "duration": "0 h 35 min",
+    "stops": [
+      [
+        "F\u00E4hrbr\u00FCcke",
+        "",
+        "04:05",
+        "SEV"
+      ],
+      [
+        "Wiesenburg(Sachs)",
+        "04:13",
+        "04:13",
+        "SEV"
+      ],
+      [
+        "Silberstra\u00DFe",
+        "04:17",
+        "04:17",
+        "SEV"
+      ],
+      [
+        "Wilkau-Ha\u00DFlau",
+        "04:22",
+        "04:22",
+        "SEV"
+      ],
+      [
+        "Cainsdorf",
+        "04:25",
+        "04:25",
+        "SEV"
+      ],
+      [
+        "Zwickau-Schedewitz",
+        "04:33",
+        "04:33",
+        "SEV"
+      ],
+      [
+        "Hauptbahnhof, Zwickau",
+        "04:40",
+        "",
+        "SEV"
+      ]
+    ]
+  },
+  {
+    "number": "37504",
+    "line": "S5X",
+    "from": "Zwickau(Sachs)Hbf",
+    "to": "Halle-Trotha",
+    "duration": "1 h 52 min",
+    "stops": [
+      [
+        "Zwickau(Sachs)Hbf",
+        "",
+        "04:49",
+        "3"
+      ],
+      [
+        "Werdau",
+        "04:57",
+        "04:57",
+        "2"
+      ],
+      [
+        "Crimmitschau",
+        "05:03",
+        "05:04",
+        "1"
+      ],
+      [
+        "G\u00F6\u00DFnitz",
+        "05:11",
+        "05:12",
+        "2"
+      ],
+      [
+        "Lehndorf(Altenburg)",
+        "05:17",
+        "05:18",
+        "2"
+      ],
+      [
+        "Altenburg",
+        "05:24",
+        "05:26",
+        "2"
+      ],
+      [
+        "B\u00F6hlen(Leipzig)",
+        "05:39",
+        "05:40",
+        "1"
+      ],
+      [
+        "Markkleeberg",
+        "05:45",
+        "05:46",
+        "2"
+      ],
+      [
+        "Markkleeberg Nord",
+        "05:47",
+        "05:48",
+        "2"
+      ],
+      [
+        "Leipzig-Connewitz",
+        "05:50",
+        "05:50",
+        "3"
+      ],
+      [
+        "Leipzig MDR",
+        "05:53",
+        "05:53",
+        "2"
+      ],
+      [
+        "Leipzig Bayerischer Bahnhof",
+        "05:55",
+        "05:55",
+        "2"
+      ],
+      [
+        "Leipzig Wilhelm-Leuschner-Platz",
+        "05:57",
+        "05:57",
+        "2"
+      ],
+      [
+        "Leipzig Markt",
+        "05:58",
+        "05:59",
+        "2"
+      ],
+      [
+        "Leipzig Hbf",
+        "06:00",
+        "06:04",
+        "2"
+      ],
+      [
+        "Leipzig Messe",
+        "06:09",
+        "06:09",
+        "4"
+      ],
+      [
+        "Leipzig/Halle Flughafen",
+        "06:16",
+        "06:17",
+        "2"
+      ],
+      [
+        "Halle(Saale)Hbf",
+        "06:27",
+        "06:30",
+        "1"
+      ],
+      [
+        "Halle Steintorbr\u00FCcke",
+        "06:32",
+        "06:33",
+        "1"
+      ],
+      [
+        "Halle Dessauer Br\u00FCcke",
+        "06:35",
+        "06:35",
+        "1"
+      ],
+      [
+        "Halle Zoo",
+        "06:37",
+        "06:37",
+        "1"
+      ],
+      [
+        "Halle Wohnstadt Nord",
+        "06:39",
+        "06:40",
+        "1"
+      ],
+      [
+        "Halle-Trotha",
+        "06:41",
+        "",
+        "1"
+      ]
+    ]
+  },
+  {
+    "number": "41973",
+    "line": "Bus RB95",
+    "from": "Hauptbahnhof, Zwickau",
+    "to": "F\u00E4hrbr\u00FCcke",
+    "duration": "0 h 35 min",
+    "stops": [
+      [
+        "Hauptbahnhof, Zwickau",
+        "",
+        "05:18",
+        "SEV"
+      ],
+      [
+        "Zwickau-Schedewitz",
+        "05:25",
+        "05:25",
+        "SEV"
+      ],
+      [
+        "Cainsdorf",
+        "05:33",
+        "05:33",
+        "SEV"
+      ],
+      [
+        "Wilkau-Ha\u00DFlau",
+        "05:36",
+        "05:36",
+        "SEV"
+      ],
+      [
+        "Silberstra\u00DFe",
+        "05:41",
+        "05:41",
+        "SEV"
+      ],
+      [
+        "Wiesenburg(Sachs)",
+        "05:45",
+        "05:45",
+        "SEV"
+      ],
+      [
+        "F\u00E4hrbr\u00FCcke",
+        "05:53",
+        "",
+        "SEV"
+      ]
+    ]
+  },
+  {
+    "number": "21973",
+    "line": "RB95",
+    "from": "Zwickau(Sachs)Hbf",
+    "to": "Johanngeorgenstadt",
+    "duration": "1 h 15 min",
+    "stops": [
+      [
+        "Zwickau(Sachs)Hbf",
+        "",
+        "05:03",
+        "7"
+      ],
+      [
+        "Zwickau-Schedewitz",
+        "05:05",
+        "05:06",
+        "2"
+      ],
+      [
+        "Cainsdorf",
+        "05:08",
+        "05:08",
+        "2"
+      ],
+      [
+        "Wilkau-Ha\u00DFlau",
+        "05:10",
+        "05:11",
+        "2"
+      ],
+      [
+        "Silberstra\u00DFe",
+        "05:14",
+        "05:15",
+        "2"
+      ],
+      [
+        "Wiesenburg(Sachs)",
+        "05:17",
+        "05:17",
+        "2"
+      ],
+      [
+        "F\u00E4hrbr\u00FCcke",
+        "05:21",
+        "05:22",
+        "1"
+      ],
+      [
+        "Hartenstein",
+        "05:25",
+        "05:26",
+        "2"
+      ],
+      [
+        "Bad Schlema",
+        "05:31",
+        "05:31",
+        "1"
+      ],
+      [
+        "Aue(Sachs)",
+        "05:35",
+        "05:37",
+        "1"
+      ],
+      [
+        "Lauter(Sachs)",
+        "05:44",
+        "05:44",
+        "1"
+      ],
+      [
+        "Schwarzenberg-Neuwelt",
+        "05:47",
+        "05:47",
+        "1"
+      ],
+      [
+        "Schwarzenberg(Erzg)",
+        "05:50",
+        "05:53",
+        "2"
+      ],
+      [
+        "Schwarzenberg Hp",
+        "05:55",
+        "05:56",
+        "1"
+      ],
+      [
+        "Erla",
+        "05:58",
+        "05:58",
+        "1"
+      ],
+      [
+        "Antonsthal",
+        "06:03",
+        "06:04",
+        "1"
+      ],
+      [
+        "Breitenbrunn(Erzg)",
+        "06:08",
+        "06:09",
+        "1"
+      ],
+      [
+        "Erlabrunn(Erzgeb)",
+        "06:12",
+        "06:13",
+        "1"
+      ],
+      [
+        "Johanngeorgenstadt",
+        "06:18",
+        "",
+        "1"
+      ]
+    ]
+  },
+  {
+    "number": "80191",
+    "line": "RB5",
+    "from": "Plauen(Vogtl) ob Bf",
+    "to": "Falkenstein(Vogtl)",
+    "duration": "0 h 39 min",
+    "stops": [
+      [
+        "Plauen(Vogtl) ob Bf",
+        "",
+        "15:18",
+        "1"
+      ],
+      [
+        "J\u00F6\u00DFnitz",
+        "15:21",
+        "15:22",
+        "1"
+      ],
+      [
+        "Jocketa",
+        "15:25",
+        "15:25",
+        "1"
+      ],
+      [
+        "Ruppertsgr\u00FCn",
+        "15:27",
+        "15:27",
+        "1"
+      ],
+      [
+        "Herlasgr\u00FCn",
+        "15:32",
+        "15:32",
+        "4"
+      ],
+      [
+        "Treuen",
+        "15:40",
+        "15:40",
+        "1"
+      ],
+      [
+        "Auerbach(V) ob Bf",
+        "15:50",
+        "15:50",
+        "1"
+      ],
+      [
+        "Auerbach(Vogtl) Hp",
+        "15:52",
+        "15:52",
+        "1"
+      ],
+      [
+        "Falkenstein(Vogtl)",
+        "15:57",
+        "",
+        "2"
+      ]
+    ]
+  },
+  {
+    "number": "20827",
+    "line": "RB1",
+    "from": "Zwickau(Sachs)Hbf",
+    "to": "Sokolov",
+    "duration": "2 h 14 min",
+    "stops": [
+      [
+        "Zwickau(Sachs)Hbf",
+        "",
+        "17:13",
+        "5"
+      ],
+      [
+        "Stenn",
+        "17:20",
+        "17:20",
+        "1"
+      ],
+      [
+        "Ebersbrunn",
+        "17:24",
+        "17:24",
+        "1"
+      ],
+      [
+        "Irfersgr\u00FCn",
+        "17:34",
+        "17:34",
+        "1"
+      ],
+      [
+        "Lengenfeld(Vogtl)",
+        "17:39",
+        "17:39",
+        "1"
+      ],
+      [
+        "Rodewisch",
+        "17:44",
+        "17:45",
+        "1"
+      ],
+      [
+        "Auerbach(V) unt Bf",
+        "17:47",
+        "17:48",
+        "1"
+      ],
+      [
+        "Ellefeld",
+        "17:50",
+        "17:50",
+        "1"
+      ],
+      [
+        "Falkenstein(Vogtl)",
+        "17:53",
+        "18:04",
+        "2"
+      ],
+      [
+        "Gr\u00FCnbach(Vogtl)",
+        "18:11",
+        "18:11",
+        "1"
+      ],
+      [
+        "Muldenberg Flo\u00DFplatz",
+        "18:16",
+        "18:16",
+        "1"
+      ],
+      [
+        "Sch\u00F6neck(Vogtl)",
+        "18:22",
+        "18:23",
+        "1"
+      ],
+      [
+        "Sch\u00F6neck(Vogtl) Ferienpark",
+        "18:23",
+        "18:23",
+        "1"
+      ],
+      [
+        "Zwotental",
+        "18:19",
+        "18:31",
+        "1"
+      ],
+      [
+        "Zwota-Zechenbach",
+        "18:36",
+        "18:36",
+        "1"
+      ],
+      [
+        "Zwota",
+        "18:39",
+        "18:39",
+        "1"
+      ],
+      [
+        "Klingenthal",
+        "18:43",
+        "18:43",
+        "1"
+      ],
+      [
+        "Kraslice-Pod vlekem",
+        "18:47",
+        "18:47",
+        ""
+      ],
+      [
+        "Kraslice",
+        "18:49",
+        "18:50",
+        ""
+      ],
+      [
+        "Kraslice predmesti",
+        "18:54",
+        "18:54",
+        ""
+      ],
+      [
+        "Rotava",
+        "18:58",
+        "18:59",
+        ""
+      ],
+      [
+        "Olovi",
+        "19:05",
+        "19:06",
+        ""
+      ],
+      [
+        "Hrebeny",
+        "19:14",
+        "19:14",
+        ""
+      ],
+      [
+        "Luh nad Svatavou",
+        "19:16",
+        "19:16",
+        ""
+      ],
+      [
+        "Svatava zastavka",
+        "19:21",
+        "19:21",
+        ""
+      ],
+      [
+        "Svatava",
+        "19:24",
+        "19:24",
+        ""
+      ],
+      [
+        "Sokolov",
+        "19:27",
+        "",
+        ""
+      ]
+    ]
+  },
+  {
+    "number": "74024",
+    "line": "RE3",
+    "from": "Dresden-Neustadt",
+    "to": "Hof Hbf",
+    "duration": "2 h 57 min",
+    "stops": [
+      [
+        "Dresden-Neustadt",
+        "",
+        "15:34",
+        "6"
+      ],
+      [
+        "Dresden-Plauen",
+        "15:43",
+        "15:48",
+        "2"
+      ],
+      [
+        "Freital-Potschappel",
+        "15:52",
+        "15:52",
+        "2"
+      ],
+      [
+        "Freital-Deuben",
+        "15:55",
+        "15:55",
+        "2"
+      ],
+      [
+        "Freital-Hainsberg",
+        "15:57",
+        "15:57",
+        "2"
+      ],
+      [
+        "Freital-Hainsberg West",
+        "16:00",
+        "16:00",
+        "2"
+      ],
+      [
+        "Tharandt",
+        "16:03",
+        "16:04",
+        "1"
+      ],
+      [
+        "Freiberg(Sachs)",
+        "16:24",
+        "16:25",
+        "1"
+      ],
+      [
+        "Fl\u00F6ha",
+        "16:42",
+        "16:43",
+        "3"
+      ],
+      [
+        "Chemnitz Hbf",
+        "16:52",
+        "16:54",
+        "10"
+      ],
+      [
+        "Hohenstein-Ernstthal",
+        "17:05",
+        "17:06",
+        "1"
+      ],
+      [
+        "Glauchau(Sachs)",
+        "17:15",
+        "17:15",
+        "2"
+      ],
+      [
+        "Zwickau(Sachs)Hbf",
+        "17:25",
+        "17:26",
+        "2"
+      ],
+      [
+        "Reichenbach(Vogtl)",
+        "17:41",
+        "17:42",
+        "4"
+      ],
+      [
+        "Plauen(Vogtl) ob Bf",
+        "17:58",
+        "17:59",
+        "4"
+      ],
+      [
+        "Hof Hbf",
+        "18:31",
+        "",
+        "8"
+      ]
+    ]
+  },
+  {
+    "number": "4866",
+    "line": "RE2",
+    "from": "M\u00FCnchen Hbf",
+    "to": "Hof Hbf",
+    "duration": "3 h 41 min",
+    "stops": [
+      [
+        "M\u00FCnchen Hbf",
+        "",
+        "19:40",
+        "31"
+      ],
+      [
+        "Freising",
+        "20:07",
+        "20:08",
+        "4"
+      ],
+      [
+        "Moosburg",
+        "20:17",
+        "20:18",
+        "1"
+      ],
+      [
+        "Landshut(Bay)Hbf",
+        "20:28",
+        "20:30",
+        "5"
+      ],
+      [
+        "Ergoldsbach",
+        "20:42",
+        "20:43",
+        "1"
+      ],
+      [
+        "Neufahrn(Niederbay)",
+        "20:46",
+        "20:47",
+        "2"
+      ],
+      [
+        "Eggm\u00FChl",
+        "20:56",
+        "20:57",
+        "3"
+      ],
+      [
+        "Regensburg Hbf",
+        "21:12",
+        "21:20",
+        "4"
+      ],
+      [
+        "Schwandorf",
+        "21:46",
+        "21:47",
+        "3"
+      ],
+      [
+        "Weiden(Oberpf)",
+        "22:13",
+        "22:14",
+        "1"
+      ],
+      [
+        "Marktredwitz",
+        "22:53",
+        "22:53",
+        "2"
+      ],
+      [
+        "Hof Hbf",
+        "23:21",
+        "",
+        "2b"
+      ]
+    ]
+  },
+  {
+    "number": "20889",
+    "line": "RB95",
+    "from": "Hof Hbf",
+    "to": "As(CZ)",
+    "duration": "0 h 39 min",
+    "stops": [
+      [
+        "Hof Hbf",
+        "",
+        "22:28",
+        "4"
+      ],
+      [
+        "Oberkotzau",
+        "22:34",
+        "22:35",
+        "2"
+      ],
+      [
+        "Wurlitz (Bedarfshalt)",
+        "22:39",
+        "22:39",
+        "1"
+      ],
+      [
+        "Rehau",
+        "22:43",
+        "22:45",
+        "1"
+      ],
+      [
+        "Sch\u00F6nwald(Oberfr)",
+        "22:54",
+        "22:54",
+        "1"
+      ],
+      [
+        "Selb-Pl\u00F6\u00DFberg",
+        "22:57",
+        "23:00",
+        "1"
+      ],
+      [
+        "As(CZ)",
+        "23:07",
+        "",
+        ""
+      ]
+    ]
+  },
+  {
+    "number": "3096",
+    "line": "RE30",
+    "from": "Hof Hbf",
+    "to": "Pegnitz",
+    "duration": "1 h 21 min",
+    "stops": [
+      [
+        "Hof Hbf",
+        "",
+        "22:37",
+        "2"
+      ],
+      [
+        "Oberkotzau",
+        "22:42",
+        "22:43",
+        "5"
+      ],
+      [
+        "Schwarzenbach(Saale)",
+        "22:47",
+        "22:48",
+        "1"
+      ],
+      [
+        "F\u00F6rbau",
+        "22:50",
+        "22:51",
+        "1"
+      ],
+      [
+        "M\u00FCnchberg",
+        "22:58",
+        "23:03",
+        "2"
+      ],
+      [
+        "Stammbach",
+        "23:10",
+        "23:11",
+        "3"
+      ],
+      [
+        "Marktschorgast",
+        "23:19",
+        "23:20",
+        "1"
+      ],
+      [
+        "Trebgast",
+        "23:28",
+        "23:28",
+        "1"
+      ],
+      [
+        "Bayreuth Hbf",
+        "23:37",
+        "23:39",
+        "2"
+      ],
+      [
+        "Creu\u00DFen(Oberfr)",
+        "23:47",
+        "23:48",
+        "1"
+      ],
+      [
+        "Schnabelwaid",
+        "23:52",
+        "23:53",
+        "1"
+      ],
+      [
+        "Pegnitz",
+        "23:58",
+        "3",
+        "3"
+      ]
+    ]
+  },
+  {
+    "number": "20886",
+    "line": "RB95",
+    "from": "As(CZ)",
+    "to": "Bad Steben",
+    "duration": "1 h 22 min",
+    "stops": [
+      [
+        "As(CZ)",
+        "",
+        "22:21",
+        ""
+      ],
+      [
+        "Selb-Pl\u00F6\u00DFberg",
+        "22:28",
+        "22:29",
+        "1"
+      ],
+      [
+        "Sch\u00F6nwald(Oberfr)",
+        "22:31",
+        "22:32",
+        "1"
+      ],
+      [
+        "Rehau",
+        "22:41",
+        "22:44",
+        "2"
+      ],
+      [
+        "Wurlitz (Bedarfshalt)",
+        "22:48",
+        "22:48",
+        "1"
+      ],
+      [
+        "Oberkotzau",
+        "22:53",
+        "22:54",
+        "2"
+      ],
+      [
+        "Hof Hbf",
+        "23:00",
+        "23:01",
+        "4b"
+      ],
+      [
+        "Hof-Neuhof",
+        "23:03",
+        "23:04",
+        "1"
+      ],
+      [
+        "K\u00F6ditz",
+        "23:10",
+        "23:10",
+        "1"
+      ],
+      [
+        "Stegenwaldhaus (Bedarfshalt)",
+        "23:15",
+        "23:15",
+        "1"
+      ],
+      [
+        "Selbitz",
+        "23:21",
+        "23:23",
+        "2"
+      ],
+      [
+        "Naila",
+        "23:27",
+        "23:28",
+        "1"
+      ],
+      [
+        "Marxgr\u00FCn",
+        "23:36",
+        "23:36",
+        "1"
+      ],
+      [
+        "H\u00F6llenthal (Bedarfshalt)",
+        "23:38",
+        "23:39",
+        "1"
+      ],
+      [
+        "Bad Steben",
+        "23:43",
+        "",
+        "1"
+      ]
+    ]
+  },
+  {
+    "number": "945",
+    "line": "ICE 945",
+    "from": "K\u00F6ln Hbf",
+    "to": "Berlin S\u00FCdkreuz",
+    "duration": "4 h 57 min",
+    "stops": [
+      [
+        "K\u00F6ln Hbf",
+        "",
+        "17:24",
+        "4"
+      ],
+      [
+        "D\u00FCsseldorf Hbf",
+        "17:49",
+        "17:50",
+        "17"
+      ],
+      [
+        "D\u00FCsseldorf Flughafen",
+        "17:57",
+        "17:59",
+        "1"
+      ],
+      [
+        "Duisburg Hbf",
+        "18:07",
+        "18:08",
+        "13"
+      ],
+      [
+        "Essen Hbf",
+        "18:20",
+        "18:21",
+        "6"
+      ],
+      [
+        "Bochum Hbf",
+        "18:31",
+        "18:32",
+        "5"
+      ],
+      [
+        "Dortmund Hbf",
+        "18:44",
+        "18:47",
+        "10"
+      ],
+      [
+        "Hamm(Westf)Hbf",
+        "19:07",
+        "19:11",
+        "5"
+      ],
+      [
+        "Bielefeld Hbf",
+        "19:36",
+        "19:38",
+        "2"
+      ],
+      [
+        "Hannover Hbf",
+        "20:28",
+        "20:31",
+        "9"
+      ],
+      [
+        "Wolfsburg Hbf",
+        "21:03",
+        "21:05",
+        "5"
+      ],
+      [
+        "Berlin Hbf",
+        "22:13",
+        "22:16",
+        "2"
+      ],
+      [
+        "Berlin S\u00FCdkreuz",
+        "22:21",
+        "",
+        "5"
+      ]
+    ]
+  },
+  {
+    "number": "3320",
+    "line": "RE3",
+    "from": "Berlin Hbf",
+    "to": "Eberswalde Hbf",
+    "duration": "0 h 41 min",
+    "stops": [
+      [
+        "Berlin Hbf",
+        "",
+        "23:24",
+        "6"
+      ],
+      [
+        "Berlin Gesundbrunnen",
+        "23:28",
+        "23:31",
+        "9"
+      ],
+      [
+        "Bernau(b Berlin)",
+        "23:43",
+        "23:45",
+        "5"
+      ],
+      [
+        "R\u00FCdnitz",
+        "23:49",
+        "23:49",
+        "1"
+      ],
+      [
+        "Biesenthal",
+        "23:53",
+        "23:54",
+        "1"
+      ],
+      [
+        "Melchow",
+        "23:57",
+        "23:57",
+        "1"
+      ],
+      [
+        "Eberswalde Hbf",
+        "00:05",
+        "",
+        "5"
+      ]
+    ]
+  },
+  {
+    "number": "3185",
+    "line": "RE4",
+    "from": "J\u00FCterbog",
+    "to": "Stendal Hbf",
+    "duration": "2 h 14 min",
+    "stops": [
+      [
+        "J\u00FCterbog",
+        "",
+        "22:04",
+        "3"
+      ],
+      [
+        "Luckenwalde",
+        "22:11",
+        "22:12",
+        "4"
+      ],
+      [
+        "Trebbin",
+        "22:19",
+        "22:20",
+        "2"
+      ],
+      [
+        "Thyrow",
+        "22:23",
+        "22:23",
+        "2"
+      ],
+      [
+        "Ludwigsfelde",
+        "22:27",
+        "22:28",
+        "2"
+      ],
+      [
+        "Birkengrund",
+        "22:30",
+        "22:31",
+        "2"
+      ],
+      [
+        "Gro\u00DFbeeren",
+        "22:34",
+        "22:34",
+        "2"
+      ],
+      [
+        "Teltow",
+        "22:38",
+        "22:44",
+        "2"
+      ],
+      [
+        "Berlin-Lichterfelde Ost",
+        "22:47",
+        "22:48",
+        "4"
+      ],
+      [
+        "Berlin S\u00FCdkreuz",
+        "22:53",
+        "22:55",
+        "6"
+      ],
+      [
+        "Berlin Potsdamer Platz",
+        "23:00",
+        "23:01",
+        "3"
+      ],
+      [
+        "Berlin Hbf",
+        "23:03",
+        "23:09",
+        "7"
+      ],
+      [
+        "Berlin Jungfernheide",
+        "23:13",
+        "23:14",
+        "4"
+      ],
+      [
+        "Berlin-Spandau",
+        "23:18",
+        "23:20",
+        "3"
+      ],
+      [
+        "Berlin-Staaken",
+        "23:23",
+        "23:24",
+        "2"
+      ],
+      [
+        "Dallgow-D\u00F6beritz",
+        "23:27",
+        "23:28",
+        "1"
+      ],
+      [
+        "Elstal",
+        "23:31",
+        "23:32",
+        "1"
+      ],
+      [
+        "Wustermark",
+        "23:35",
+        "23:56",
+        "1"
+      ],
+      [
+        "Buschow",
+        "23:47",
+        "23:48",
+        "1"
+      ],
+      [
+        "Nennhausen",
+        "23:53",
+        "23:54",
+        "1"
+      ],
+      [
+        "Rathenow",
+        "00:00",
+        "00:02",
+        "1"
+      ],
+      [
+        "Stendal Hbf",
+        "00:18",
+        "",
+        "3"
+      ]
+    ]
+  },
+  {
+    "number": "4851",
+    "line": "RE2",
+    "from": "Schwandorf",
+    "to": "M\u00FCnchen Hbf",
+    "duration": "2 h 13 min",
+    "stops": [
+      [
+        "Schwandorf",
+        "",
+        "04:03",
+        "4"
+      ],
+      [
+        "Maxh\u00FCtte-Haidhof",
+        "04:13",
+        "04:14",
+        "1"
+      ],
+      [
+        "Regenstauf",
+        "04:23",
+        "04:24",
+        "3"
+      ],
+      [
+        "Regensburg Hbf",
+        "04:37",
+        "04:45",
+        "1"
+      ],
+      [
+        "Eggm\u00FChl",
+        "04:59",
+        "05:00",
+        "2"
+      ],
+      [
+        "Neufahrn(Niederbay)",
+        "05:10",
+        "05:11",
+        "1"
+      ],
+      [
+        "Ergoldsbach",
+        "05:14",
+        "05:15",
+        "1"
+      ],
+      [
+        "Landshut(Bay)Hbf",
+        "05:28",
+        "05:30",
+        "6"
+      ],
+      [
+        "Moosburg",
+        "05:40",
+        "05:41",
+        "2"
+      ],
+      [
+        "Freising",
+        "05:50",
+        "05:51",
+        "2"
+      ],
+      [
+        "M\u00FCnchen Hbf",
+        "06:16",
+        "",
+        "28"
+      ]
+    ]
+  },
+  {
+    "number": "3039",
+    "line": "RE30",
+    "from": "Pegnitz",
+    "to": "Hof Hbf",
+    "duration": "1 h 22 min",
+    "stops": [
+      [
+        "Pegnitz",
+        "",
+        "23:52",
+        "3"
+      ],
+      [
+        "Creu\u00DFen(Oberfr)",
+        "00:00",
+        "00:00",
+        "2"
+      ],
+      [
+        "Bayreuth Hbf",
+        "00:09",
+        "00:11",
+        "1"
+      ],
+      [
+        "Bindlach",
+        "00:14",
+        "00:15",
+        "2"
+      ],
+      [
+        "Harsdorf",
+        "00:19",
+        "00:20",
+        "2"
+      ],
+      [
+        "Trebgast",
+        "00:24",
+        "00:25",
+        "2"
+      ],
+      [
+        "Marktschorgast",
+        "00:34",
+        "00:35",
+        "2"
+      ],
+      [
+        "Stammbach",
+        "00:43",
+        "00:44",
+        "1"
+      ],
+      [
+        "M\u00FCnchberg",
+        "00:52",
+        "00:53",
+        "3"
+      ],
+      [
+        "Schwarzenbach(Saale)",
+        "01:01",
+        "01:02",
+        "2"
+      ],
+      [
+        "Oberkotzau",
+        "01:06",
+        "01:07",
+        "4"
+      ],
+      [
+        "Hof Hbf",
+        "01:14",
+        "",
+        "2"
+      ]
+    ]
+  }
+]

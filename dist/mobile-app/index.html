@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>RIS-Communicator</title>
+    <meta name="theme-color" content="#6d1730">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="RIS">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=20260622-2">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png?v=20260622-2">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png?v=20260622-2">
+    <link rel="manifest" href="manifest.webmanifest?v=20260622-2">
+    <link rel="stylesheet" href="styles.css?v=20260622-2">
+  </head>
+  <body>
+    <main class="app-shell" aria-live="polite">
+      <section class="screen splash" id="splash" aria-label="Startbildschirm">
+        <img class="template-bg" src="assets/templates/splash.jpg" alt="">
+        <svg class="db-logo db-logo--white" viewBox="0 0 120 80" aria-label="DB" role="img">
+          <rect class="db-frame" x="9" y="9" width="102" height="62" rx="7"></rect>
+          <text class="db-text" x="60" y="56" text-anchor="middle">DB</text>
+        </svg>
+        <h1>&bdquo;Hallo, wir w&uuml;nschen dir einen<br>erfolgreichen Arbeitstag&ldquo;</h1>
+      </section>
+
+      <section class="screen home hidden" id="home" aria-label="RIS-Communicator Auswahl">
+        <header class="topbar">
+          <div class="brand">
+            <img class="db-logo-img" src="assets/icons/db-logo.png" alt="DB">
+            <strong>RIS-Communicator</strong>
+          </div>
+          <div class="actions" aria-label="Aktionen">
+            <button type="button" data-action="open-search-menu" aria-label="Suchen">
+              <img class="header-icon" src="assets/icons/search.png" alt="">
+            </button>
+            <button type="button" data-action="open-app-menu" aria-label="Men&uuml;">
+              <img class="header-icon header-icon--menu" src="assets/icons/menu.png" alt="">
+            </button>
+          </div>
+        </header>
+
+        <div class="content">
+          <div class="card-stack">
+            <button class="choice-card" type="button" data-action="open-search">
+              <span class="choice-icon train-icon" aria-hidden="true">
+                <img class="choice-icon-img choice-icon-img--train" src="assets/icons/train-home.png" alt="">
+              </span>
+              <span class="choice-copy">
+                <strong>Einbuchen</strong>
+                <span>Auf einen Zug einbuchen</span>
+              </span>
+              <span class="arrow" aria-hidden="true">&rarr;</span>
+            </button>
+
+            <button class="choice-card choice-card--compact" type="button">
+              <span class="choice-icon" aria-hidden="true">
+                <img class="choice-icon-img choice-icon-img--bell" src="assets/icons/bell-home.png" alt="">
+              </span>
+              <span class="choice-copy"><strong>Nachrichten</strong></span>
+              <span class="arrow" aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen search-menu-page hidden" id="searchMenuPage" aria-label="Suche">
+        <header class="plain-header">
+          <button class="plain-close" type="button" data-action="close-search-menu" aria-label="Schlie&szlig;en">&times;</button>
+          <strong>Suche</strong>
+        </header>
+        <div class="search-menu-body">
+          <div class="search-menu-stack">
+            <button class="choice-card search-choice-card" type="button" data-action="open-train-preview-search">
+              <span class="choice-icon train-icon" aria-hidden="true">
+                <img class="choice-icon-img choice-icon-img--train" src="assets/icons/train-home.png" alt="">
+              </span>
+              <span class="choice-copy"><strong>Zugsuche</strong></span>
+              <span class="arrow" aria-hidden="true">&rarr;</span>
+            </button>
+
+            <button class="choice-card search-choice-card" type="button" data-action="open-station-search">
+              <span class="choice-icon search-menu-station-icon" aria-hidden="true"></span>
+              <span class="choice-copy"><strong>Bahnhofsinformationen</strong></span>
+              <span class="arrow" aria-hidden="true">&rarr;</span>
+            </button>
+
+            <button class="choice-card search-choice-card" type="button" data-action="open-station-board-search">
+              <span class="choice-icon search-menu-board-icon" aria-hidden="true"></span>
+              <span class="choice-copy"><strong>Ankunfts- und Abfahrtstafel</strong></span>
+              <span class="arrow" aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen app-page hidden" id="searchPage" aria-label="Zugnummer suchen">
+        <header class="searchbar">
+          <button class="icon-button" type="button" data-action="back-home" aria-label="Zur&uuml;ck">
+            <img class="header-icon header-icon--back" src="assets/icons/back.png" alt="">
+          </button>
+          <form class="search-field" id="searchForm">
+            <img class="search-field-icon" src="assets/icons/search.png" alt="">
+            <input id="trainSearch" inputmode="numeric" autocomplete="off" aria-label="Zugnummer" type="search">
+            <span class="search-caret" aria-hidden="true"></span>
+            <button class="clear-button hidden" type="button" data-action="clear-search" aria-label="Eingabe l&ouml;schen">&times;</button>
+          </form>
+          <button class="icon-button menu-button" type="button" data-action="open-editor" aria-label="Men&uuml;">
+            <img class="header-icon header-icon--menu" src="assets/icons/menu.png" alt="">
+          </button>
+        </header>
+        <div class="page-body" id="searchResult"></div>
+      </section>
+
+      <section class="screen app-page hidden" id="stationSearchPage" aria-label="Bahnhof suchen">
+        <header class="searchbar">
+          <button class="icon-button" type="button" data-action="back-search-menu" aria-label="Zur&uuml;ck">
+            <img class="header-icon header-icon--back" src="assets/icons/back.png" alt="">
+          </button>
+          <form class="search-field" id="stationSearchForm">
+            <img class="search-field-icon" src="assets/icons/search.png" alt="">
+            <input id="stationSearch" list="stationOptions" autocomplete="off" aria-label="Bahnhof oder RIL100" type="search">
+            <span class="search-caret" aria-hidden="true"></span>
+            <button class="clear-button hidden" type="button" data-action="clear-station-search" aria-label="Eingabe l&ouml;schen">&times;</button>
+          </form>
+          <button class="icon-button menu-button" type="button" data-action="open-app-menu" aria-label="Men&uuml;">
+            <img class="header-icon header-icon--menu" src="assets/icons/menu.png" alt="">
+          </button>
+        </header>
+        <div class="station-search-body" id="stationSearchResult"></div>
+      </section>
+
+      <section class="screen preview-shell hidden" id="previewPage" aria-label="Zuglauf Vorschau">
+        <div class="preview-card">
+          <header class="preview-header">
+            <button class="icon-button" type="button" data-action="back-preview" aria-label="Zur&uuml;ck">
+              <img class="header-icon header-icon--back" src="assets/icons/back.png" alt="">
+            </button>
+            <strong id="previewTitle">RE2 (4865)</strong>
+          </header>
+          <div class="preview-divider"></div>
+          <div class="preview-route" id="previewRoute"></div>
+          <nav class="preview-tabs">
+            <button class="active" type="button">
+              <img class="tab-icon tab-icon--zuglauf" src="assets/icons/tab-zuglauf.png" alt="">
+              <span>Zuglauf</span>
+            </button>
+            <button type="button">
+              <img class="tab-icon tab-icon--meinzug" src="assets/icons/tab-meinzug.png" alt="">
+              <span>Zuginfo</span>
+            </button>
+            <button type="button">
+              <img class="tab-icon tab-icon--bell" src="assets/icons/tab-bell.png" alt="">
+              <span>Nachrichten</span>
+            </button>
+          </nav>
+        </div>
+        <button class="preview-close-button" type="button" data-action="close-preview">Ansicht schlie&szlig;en</button>
+      </section>
+
+      <section class="screen preview-shell hidden" id="stationBoardPage" aria-label="Ankunfts- und Abfahrtstafel">
+        <div class="station-board-card">
+          <header class="station-board-header">
+            <button class="icon-button" type="button" data-action="back-station-search" aria-label="Zur&uuml;ck">
+              <img class="header-icon header-icon--back" src="assets/icons/back.png" alt="">
+            </button>
+            <strong id="stationBoardTitle">Hof Hbf (NHO)</strong>
+          </header>
+          <div class="station-board-meta">
+            <span class="meta-icon calendar-icon" aria-hidden="true"></span>
+            <button type="button" id="stationBoardDateButton" data-action="pick-board-date">Heute</button>
+            <input class="native-picker" id="stationBoardDateInput" type="date" aria-label="Datum ausw&auml;hlen">
+            <span class="meta-icon clock-icon" aria-hidden="true"></span>
+            <button type="button" id="stationBoardTime" data-action="pick-board-time">Ab 03:03 (90min)</button>
+            <input class="native-picker" id="stationBoardTimeInput" type="time" aria-label="Uhrzeit ausw&auml;hlen">
+          </div>
+          <div class="station-board-controls">
+            <button type="button" data-action="board-earlier">Fr&uuml;her (-30min)</button>
+            <div class="station-board-filter">
+              <span>Filtern</span>
+              <span class="filter-icon" aria-hidden="true"></span>
+              <button type="button" data-action="toggle-board-mode"><span id="stationBoardMode">Abfahrt</span> <span class="switch-icon" aria-hidden="true"></span></button>
+            </div>
+          </div>
+          <div class="station-board-list" id="stationBoardList"></div>
+          <div class="station-board-later">
+            <button type="button" data-action="board-later">Sp&auml;ter (+30 Min.)</button>
+          </div>
+        </div>
+        <button class="preview-close-button" type="button" data-action="close-station-board">Ansicht schlie&szlig;en</button>
+      </section>
+
+      <datalist id="stationOptions"></datalist>
+
+      <section class="screen journey-page hidden" id="journeyPage" aria-label="Zuglauf">
+        <header class="journey-header">
+          <button class="logout-button" type="button" data-action="open-safety" aria-label="Ausbuchen">
+            <img class="journey-logout-icon" src="assets/icons/logout.png" alt="">
+          </button>
+          <strong id="journeyTitle">RE2 (4865)</strong>
+          <span></span>
+          <button type="button" data-action="back-search" aria-label="Suchen">
+            <img class="journey-action-icon" src="assets/icons/journey-search.png" alt="">
+          </button>
+          <button type="button" data-action="open-editor" aria-label="Men&uuml;">
+            <img class="journey-action-icon journey-action-icon--menu" src="assets/icons/journey-menu.png" alt="">
+          </button>
+        </header>
+        <div class="route-scroll" id="routeScroll"></div>
+        <nav class="bottom-tabs">
+          <button class="active" type="button">
+            <img class="tab-icon tab-icon--zuglauf" src="assets/icons/tab-zuglauf.png" alt="">
+            <span>Zuglauf</span>
+          </button>
+          <button type="button">
+            <img class="tab-icon tab-icon--meinzug" src="assets/icons/tab-meinzug.png" alt="">
+            <span>Mein Zug</span>
+          </button>
+          <button type="button">
+            <img class="tab-icon tab-icon--bell" src="assets/icons/tab-bell.png" alt="">
+            <span>Nachrichten</span>
+          </button>
+        </nav>
+      </section>
+
+      <section class="screen safety-page hidden" id="safetyPage" aria-label="Abfrage zur Sicherheitslage">
+        <header class="safety-header">
+          <button class="safety-close" type="button" data-action="close-safety" aria-label="Schlie&szlig;en">&times;</button>
+          <strong>Abfrage zur Sicherheitslage</strong>
+        </header>
+        <div class="safety-body">
+          <div class="safety-card">
+            <h2>Gab es einen Vorfall?</h2>
+            <p>
+              Wurdest <b>Du</b> oder <b>Fahrg&auml;ste</b> in deinem Zug durch Mitreisende
+              <b>bedroht, gen&ouml;tigt, beleidigt</b> oder <b>verletzt?</b> Oder gab es
+              sonstige <b>sicherheitsrelevante</b> Vorf&auml;lle?
+            </p>
+            <label class="safety-option">
+              <input type="radio" name="incident" value="yes">
+              <span></span>
+              <b>Ja, weiter zu dLox</b>
+            </label>
+            <label class="safety-option">
+              <input type="radio" name="incident" value="no">
+              <span></span>
+              <b>Nein</b>
+            </label>
+          </div>
+          <button class="checkout-button" id="checkoutButton" type="button" data-action="checkout" disabled>Von RE2 (4865) ausbuchen</button>
+        </div>
+      </section>
+
+      <section class="screen impressum-page hidden" id="impressumPage" aria-label="Impressum">
+        <header class="impressum-header">
+          <button class="impressum-close" type="button" data-action="close-impressum" aria-label="Schlie&szlig;en">&times;</button>
+          <strong>Impressum</strong>
+        </header>
+        <div class="impressum-body">
+          <h1>Impressum</h1>
+
+          <p><b>Dies ist eine App der:</b></p>
+
+          <p>
+            Deutsche Bahn AG<br>
+            Reisendeninformation<br>
+            Weilburgerstra&szlig;e 28<br>
+            60326 Frankfurt am Main
+          </p>
+
+          <p>
+            AG Berlin-Charlottenburg HRB 50000<br>
+            USt-IdNr.: DE 811569869
+          </p>
+
+          <p>
+            Aufsichtsbeh&ouml;rde:<br>
+            Eisenbahn-Bundesamt<br>
+            Heinemannstra&szlig;e 6<br>
+            53175 Bonn
+          </p>
+
+          <p>
+            Die Deutsche Bahn AG wird vertreten durch den Vorstand:<br>
+            Evelyn Palla, Harmen van Zijderveld, Bernhard Osburg, Dr. Michael Peterson,
+            Dr. Daniela Gerd tom Markotten und Martin Seiler.
+          </p>
+
+          <p>
+            Bei Fragen und Anmerkungen zu dieser App wenden Sie sich bitte an:<br>
+            <a href="mailto:ris@deutschebahn.com">ris@deutschebahn.com</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="screen settings-page hidden" id="settingsPage" aria-label="App Einstellungen">
+        <header class="settings-header">
+          <button class="settings-back" type="button" data-action="back-settings-home" aria-label="Zur&uuml;ck">
+            <img src="assets/icons/back.png" alt="">
+          </button>
+          <strong>App Einstellungen</strong>
+        </header>
+        <div class="settings-body settings-body--overview">
+          <div class="settings-grid">
+            <button class="settings-tile" type="button" data-action="reset-login">
+              <span class="settings-tile-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64">
+                  <circle cx="26" cy="16" r="7"></circle>
+                  <path d="M15 42v-7c0-6 5-11 11-11"></path>
+                  <path d="M40 24a12 12 0 1 1-8 21"></path>
+                  <path d="M31 35h15"></path>
+                </svg>
+              </span>
+              <span>Login<br>zur&uuml;cksetzen</span>
+            </button>
+            <button class="settings-tile" type="button" data-action="open-notifications">
+              <span class="settings-tile-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64">
+                  <path d="M21 43h22"></path>
+                  <path d="M24 43V27a8 8 0 0 1 16 0v16"></path>
+                  <path d="M28 49a5 5 0 0 0 8 0"></path>
+                  <path d="M32 15v-5"></path>
+                </svg>
+              </span>
+              <span>Benachrichtigungen</span>
+            </button>
+            <button class="settings-tile" type="button" data-action="open-profile">
+              <span class="settings-tile-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64">
+                  <circle cx="32" cy="20" r="10"></circle>
+                  <path d="M18 54v-8c0-8 6-14 14-14s14 6 14 14v8"></path>
+                </svg>
+              </span>
+              <span>Profil</span>
+            </button>
+            <button class="settings-tile" type="button" data-action="open-appearance">
+              <span class="settings-tile-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64">
+                  <circle cx="32" cy="32" r="18"></circle>
+                  <path d="M32 14a18 18 0 0 0 0 36z" fill="currentColor" stroke="none"></path>
+                </svg>
+              </span>
+              <span>Erscheinungsbild</span>
+            </button>
+            <button class="settings-tile" type="button" data-action="open-ris-import">
+              <span class="settings-tile-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64">
+                  <path d="M14 18h36v30H14z"></path>
+                  <path d="M22 26h20"></path>
+                  <path d="M22 34h14"></path>
+                  <path d="M44 40l6 6 6-6"></path>
+                  <path d="M50 26v20"></path>
+                </svg>
+              </span>
+              <span>RIS Fahrplandaten</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen settings-page hidden" id="notificationsPage" aria-label="Benachrichtigungen">
+        <header class="settings-header">
+          <button class="settings-back" type="button" data-action="back-to-settings" aria-label="Zur&uuml;ck">
+            <img src="assets/icons/back.png" alt="">
+          </button>
+          <strong>Benachrichtigungen</strong>
+        </header>
+        <div class="settings-body settings-body--form">
+          <section class="settings-section">
+            <h2>Anschlussansage</h2>
+            <label>Erste Erinnerung</label>
+            <div class="settings-step-row">
+              <div class="settings-stepper">
+                <button type="button" data-step-target="firstReminder" data-step="-1">-</button>
+                <span id="firstReminderValue">6</span>
+                <button type="button" data-step-target="firstReminder" data-step="1">+</button>
+              </div>
+              <span>Min. vor Halt</span>
+            </div>
+            <div class="settings-divider"></div>
+            <label>Sp&auml;ter erinnern</label>
+            <div class="settings-step-row">
+              <div class="settings-stepper">
+                <button type="button" data-step-target="laterReminder" data-step="-1">-</button>
+                <span id="laterReminderValue">2</span>
+                <button type="button" data-step-target="laterReminder" data-step="1">+</button>
+              </div>
+              <span>Min. nach erster Erinnerung</span>
+            </div>
+          </section>
+
+          <section class="settings-section">
+            <h2>Mein Zug</h2>
+            <div class="settings-toggle-row">
+              <span>Kundenfeedback</span>
+              <button class="settings-toggle active" type="button" data-toggle="customerFeedback" aria-label="Kundenfeedback"></button>
+            </div>
+          </section>
+
+          <section class="settings-section">
+            <h2>Nachrichten</h2>
+            <div class="settings-toggle-row">
+              <span>Verkehrsleitung/ Leitstelle+</span>
+              <button class="settings-toggle active" type="button" data-toggle="trafficControl" aria-label="Verkehrsleitung"></button>
+            </div>
+            <div class="settings-toggle-row">
+              <span>St&ouml;rungen</span>
+              <button class="settings-toggle active" type="button" data-toggle="disruptions" aria-label="St&ouml;rungen"></button>
+            </div>
+            <div class="settings-toggle-row">
+              <span>Informationen</span>
+              <button class="settings-toggle active" type="button" data-toggle="information" aria-label="Informationen"></button>
+            </div>
+            <div class="settings-toggle-row">
+              <span>Anwenderinformationen</span>
+              <button class="settings-toggle active" type="button" data-toggle="userInformation" aria-label="Anwenderinformationen"></button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="screen settings-page hidden" id="profilePage" aria-label="Profil">
+        <header class="settings-header">
+          <button class="settings-back" type="button" data-action="back-to-settings" aria-label="Zur&uuml;ck">
+            <img src="assets/icons/back.png" alt="">
+          </button>
+          <strong>Profil</strong>
+        </header>
+        <div class="settings-body settings-body--profile">
+          <section class="profile-section">
+            <h2>Anzeigename</h2>
+            <div class="profile-value" id="profileNameDisplay">-</div>
+            <div class="profile-toggle-row">
+              <span>
+                <b>Eigenen Namen anzeigen</b>
+                <small>&Auml;nderungen werden erst mit der n&auml;chsten Einbuchung wirksam.</small>
+              </span>
+              <button class="settings-toggle active" type="button" data-toggle="showOwnName" aria-label="Eigenen Namen anzeigen"></button>
+            </div>
+          </section>
+          <section class="profile-section">
+            <h2>Telefonnummer</h2>
+            <div class="profile-value" id="profilePhoneDisplay">-</div>
+          </section>
+        </div>
+      </section>
+
+      <section class="screen settings-page hidden" id="appearancePage" aria-label="Erscheinungsbild">
+        <header class="settings-header">
+          <button class="settings-back" type="button" data-action="back-to-settings" aria-label="Zur&uuml;ck">
+            <img src="assets/icons/back.png" alt="">
+          </button>
+          <strong>Erscheinungsbild</strong>
+        </header>
+        <div class="settings-body settings-body--appearance">
+          <button class="appearance-row" type="button" data-theme="system">Systemeinstellung</button>
+          <button class="appearance-row" type="button" data-theme="dark">Dunkel</button>
+          <button class="appearance-row selected" type="button" data-theme="light"><b>Hell</b><span>&check;</span></button>
+        </div>
+      </section>
+
+      <section class="screen settings-page hidden" id="risImportPage" aria-label="RIS Fahrplandaten">
+        <header class="settings-header">
+          <button class="settings-back" type="button" data-action="back-to-settings" aria-label="Zur&uuml;ck">
+            <img src="assets/icons/back.png" alt="">
+          </button>
+          <strong>RIS Fahrplandaten</strong>
+        </header>
+        <form class="settings-body ris-import-form" id="risImportForm">
+          <section class="settings-section">
+            <h2>RIS Infoplattform</h2>
+            <p class="ris-import-hint">Melde dich f&uuml;r den Fahrplanimport an. Die Zugangsdaten werden nur f&uuml;r diese Abfrage verwendet und nicht in der App gespeichert.</p>
+            <label>Benutzername<input id="risUsername" autocomplete="username" placeholder="Benutzername eingeben"></label>
+            <label>Passwort<input id="risPassword" type="password" autocomplete="current-password" placeholder="Passwort eingeben"></label>
+            <button class="ris-import-button" type="submit">Fahrpl&auml;ne &uuml;bertragen</button>
+            <p class="ris-import-status" id="risImportStatus"></p>
+          </section>
+        </form>
+      </section>
+
+      <section class="screen settings-page hidden" id="profileSetupPage" aria-label="Anmeldung">
+        <header class="settings-header">
+          <span></span>
+          <strong>Anmeldung</strong>
+        </header>
+        <form class="settings-body profile-setup" id="profileSetupForm">
+          <h2>Profil einrichten</h2>
+          <label>Anzeigename<input id="setupName" autocomplete="name" placeholder="Anzeigename eingeben"></label>
+          <label>Telefonnummer<input id="setupPhone" inputmode="tel" autocomplete="tel" placeholder="Telefonnummer eingeben"></label>
+          <button type="submit">Speichern</button>
+        </form>
+      </section>
+
+      <section class="screen editor-page hidden" id="editorPage" aria-label="Zugdaten Editor">
+        <header class="editor-header">
+          <button class="icon-button" type="button" data-action="close-editor" aria-label="Zur&uuml;ck">&lsaquo;</button>
+          <strong>Zugdaten-Editor</strong>
+          <button class="save-editor" type="button" data-action="save-editor">Speichern</button>
+        </header>
+        <form class="editor-form" id="editorForm">
+          <label>Zugnummer<input id="editNumber" inputmode="numeric" value="4865"></label>
+          <label>Linie<input id="editLine" value="RE2"></label>
+          <label>Startbahnhof<input id="editFrom" value="Hof Hbf"></label>
+          <label>Zielbahnhof<input id="editTo" value="M&uuml;nchen Hbf"></label>
+          <label>Halte als CSV: Bahnhof;an;ab;Gleis
+            <textarea id="editStops" spellcheck="false"></textarea>
+          </label>
+          <p class="editor-hint">Nach dem Speichern kann die Zugnummer in der Suche gefunden werden.</p>
+        </form>
+      </section>
+
+      <div class="sheet hidden" id="roleSheet" role="dialog" aria-modal="true" aria-label="Rolle ausw&auml;hlen">
+        <button class="sheet-backdrop" type="button" data-action="close-sheet" aria-label="Schlie&szlig;en"></button>
+        <div class="sheet-panel">
+          <p id="roleText">Bitte w&auml;hle deine Rolle aus, um dich in den RE2 (4865) einzubuchen</p>
+          <button type="button" data-role="KiN 1"><b>KiN 1</b><span>Kundenbetreuer:in 1</span></button>
+          <button type="button" data-role="KiN x"><b>KiN x</b><span>Kundenbetreuer:in x</span></button>
+          <button type="button" data-role="i KiN"><b>i KiN</b><span>Kundenbetreuer:in inaktiv</span></button>
+        </div>
+      </div>
+
+      <div class="app-menu hidden" id="appMenu" role="dialog" aria-modal="true" aria-label="RIS-Men&uuml;">
+        <button class="app-menu-backdrop" type="button" data-action="close-app-menu" aria-label="Men&uuml; schlie&szlig;en"></button>
+        <aside class="app-menu-panel">
+          <div class="app-menu-logo">
+            <img class="app-menu-db" src="assets/icons/db-logo.png" alt="DB">
+            <span>2.28.7</span>
+          </div>
+
+          <section class="app-menu-section">
+            <h2>Allgemein</h2>
+            <div class="app-menu-grid">
+              <button class="app-menu-tile" type="button" data-action="open-settings">
+                <span class="app-menu-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64">
+                    <path d="M27 8h10l2 7a19 19 0 0 1 5 3l7-3 5 9-6 5a19 19 0 0 1 0 6l6 5-5 9-7-3a19 19 0 0 1-5 3l-2 7H27l-2-7a19 19 0 0 1-5-3l-7 3-5-9 6-5a19 19 0 0 1 0-6l-6-5 5-9 7 3a19 19 0 0 1 5-3z"></path>
+                    <circle cx="32" cy="32" r="8"></circle>
+                  </svg>
+                </span>
+                <span>App Einstellungen</span>
+              </button>
+              <button class="app-menu-tile" type="button">
+                <span class="app-menu-icon" aria-hidden="true">
+                  <svg class="app-menu-phone-icon" viewBox="0 0 64 64">
+                    <path d="M24.5 9.5c-3.4 0-7.2 5.8-7.2 9.6 0 4.2 5.2 13.7 12.8 21.4 7.8 7.8 17.8 13.2 21.8 12.8 3.8-.4 8.5-5 8.5-8.2 0-1.2-.6-2.2-1.6-3l-9.7-7.4c-1.5-1.2-3.6-1-5 .3l-4.7 4.7c-4.9-2.9-8.9-6.8-11.7-11.7l4.7-4.7c1.4-1.4 1.5-3.4.3-5l-7.3-9.5c-.4-.3-.7-.3-.9-.3z"></path>
+                  </svg>
+                </span>
+                <span>Telefonbuch</span>
+              </button>
+              <button class="app-menu-tile" type="button">
+                <span class="app-menu-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64">
+                    <circle cx="32" cy="32" r="21"></circle>
+                    <path d="M11 32h42M32 11c7 7 10 14 10 21s-3 14-10 21M32 11c-7 7-10 14-10 21s3 14 10 21"></path>
+                  </svg>
+                </span>
+                <span>DB Planet</span>
+              </button>
+            </div>
+          </section>
+
+          <section class="app-menu-section app-menu-section--help">
+            <h2>Anwenderhilfe</h2>
+            <div class="app-menu-grid">
+              <button class="app-menu-tile" type="button">
+                <span class="app-menu-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64">
+                    <path d="M20 29a12 12 0 0 1 24 0"></path>
+                    <path d="M18 30v9h8v-9zM38 30v9h8v-9z"></path>
+                    <path d="M32 42v5M20 56v-2c0-7 5-12 12-12s12 5 12 12v2"></path>
+                  </svg>
+                </span>
+                <span>Anrufen</span>
+              </button>
+              <button class="app-menu-tile" type="button">
+                <span class="app-menu-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64">
+                    <rect x="11" y="17" width="42" height="30" rx="2"></rect>
+                    <path d="M13 20l19 16 19-16"></path>
+                  </svg>
+                </span>
+                <span>E-Mail schreiben</span>
+              </button>
+            </div>
+          </section>
+
+          <nav class="app-menu-footer" aria-label="Rechtliches">
+            <button type="button" data-action="open-impressum">Impressum</button>
+            <button type="button">Lizenz</button>
+            <button type="button">Datenschutz</button>
+          </nav>
+        </aside>
+      </div>
+
+      <div class="update-dialog hidden" id="updateDialog" role="dialog" aria-modal="true" aria-label="Update verf&uuml;gbar">
+        <div class="update-dialog-panel">
+          <h2>Update verf&uuml;gbar</h2>
+          <p>Eine neue Version des RIS-Communicators ist verf&uuml;gbar.</p>
+          <div class="update-dialog-actions">
+            <button class="update-secondary" type="button" data-action="dismiss-update">Sp&auml;ter</button>
+            <button class="update-primary" type="button" data-action="install-update">Jetzt aktualisieren</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="confirm-dialog hidden" id="resetLoginDialog" role="dialog" aria-modal="true" aria-label="Login zur&uuml;cksetzen">
+        <div class="confirm-dialog-panel">
+          <p>Willst du den Login wirklich zur&uuml;cksetzen?</p>
+          <div class="confirm-dialog-actions">
+            <button class="confirm-secondary" type="button" data-action="cancel-reset-login">ABBRECHEN</button>
+            <button class="confirm-primary" type="button" data-action="confirm-reset-login">ZUR&Uuml;CKSETZEN</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="app.js?v=20260622-2"></script>
+    <script>
+      if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./service-worker.js").catch(() => {});
+        });
+      }
+    </script>
+  </body>
+</html>
