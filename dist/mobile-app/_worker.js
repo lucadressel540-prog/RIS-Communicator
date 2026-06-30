@@ -116,11 +116,16 @@ async function handleRisImport(request, env) {
     return json({ error: "Benutzername und Passwort sind erforderlich." }, 400);
   }
 
-  const response = await fetch(env.RIS_IMPORT_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username, password })
-  });
+  let response;
+  try {
+    response = await fetch(env.RIS_IMPORT_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username, password })
+    });
+  } catch {
+    return json({ error: "RIS Import Ziel ist nicht erreichbar." }, 502);
+  }
 
   const text = await response.text();
   if (!response.ok) {
@@ -232,8 +237,14 @@ function readErrorMessage(text) {
 
   try {
     const payload = JSON.parse(text);
-    return payload.error || payload.detail || payload.message || "";
+    const main = payload.error || payload.detail || payload.message || "";
+    const hint = payload.hint || "";
+    return hint ? `${main} ${hint}`.trim() : main;
   } catch {
-    return text.slice(0, 180);
+    const raw = text.slice(0, 180).trim();
+    if (/^error code\s*:?\s*\d+/i.test(raw)) {
+      return "RIS Import Ziel ist nicht erreichbar. Bitte RIS_IMPORT_URL in Cloudflare pruefen.";
+    }
+    return raw;
   }
 }

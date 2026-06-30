@@ -80,8 +80,14 @@ function readErrorMessage(text) {
 
   try {
     const payload = JSON.parse(text);
-    return payload.error || payload.detail || payload.message || "";
+    const main = payload.error || payload.detail || payload.message || "";
+    const hint = payload.hint || "";
+    return hint ? `${main} ${hint}`.trim() : main;
   } catch {
-    return text.slice(0, 180);
+    const raw = text.slice(0, 180).trim();
+    if (/^error code\s*:?\s*\d+/i.test(raw)) {
+      return "RIS Import Ziel ist nicht erreichbar. Bitte RIS_IMPORT_URL in Cloudflare pruefen.";
+    }
+    return raw;
   }
 }

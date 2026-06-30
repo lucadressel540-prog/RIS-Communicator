@@ -1,4 +1,4 @@
-﻿/*
+/*
   Assets can be cached; app shell and runtime files must stay refreshable.
 */
 /index.html
