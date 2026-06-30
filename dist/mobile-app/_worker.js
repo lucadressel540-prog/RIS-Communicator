@@ -148,10 +148,14 @@ async function handleRisImport(request, env) {
     return json({ error: "RIS Import lieferte keine Fahrplanliste." }, 502);
   }
 
-  return json({
-    trains: payload.trains,
-    version: payload.version || new Date().toISOString()
-  });
+  const version = payload.version || new Date().toISOString();
+
+  if (env.RIS_STATE) {
+    await env.RIS_STATE.put(TRAINS_KEY, JSON.stringify(payload.trains));
+    await env.RIS_STATE.put(DATA_VERSION_KEY, JSON.stringify({ version }));
+  }
+
+  return json({ trains: payload.trains, version });
 }
 
 async function handleActiveBooking(request, env) {
