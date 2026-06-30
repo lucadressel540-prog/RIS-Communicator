@@ -86,7 +86,7 @@ function readErrorMessage(text) {
   } catch {
     const raw = text.slice(0, 180).trim();
     if (/^error code\s*:?\s*\d+/i.test(raw)) {
-      return "RIS Import Ziel ist nicht erreichbar. Bitte RIS_IMPORT_URL in Cloudflare prüfen.";
+      return "RIS Import Ziel ist nicht erreichbar. Bitte RIS_IMPORT_URL in Cloudflare pruefen.";
     }
     return raw;
   }
