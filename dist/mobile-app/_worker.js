@@ -151,8 +151,12 @@ async function handleRisImport(request, env) {
   const version = payload.version || new Date().toISOString();
 
   if (env.RIS_STATE) {
-    await env.RIS_STATE.put(TRAINS_KEY, JSON.stringify(payload.trains));
-    await env.RIS_STATE.put(DATA_VERSION_KEY, JSON.stringify({ version }));
+    try {
+      await env.RIS_STATE.put(TRAINS_KEY, JSON.stringify(payload.trains));
+      await env.RIS_STATE.put(DATA_VERSION_KEY, JSON.stringify({ version }));
+    } catch {
+      return json({ error: "RIS Import konnte nicht in KV gespeichert werden." }, 502);
+    }
   }
 
   return json({ trains: payload.trains, version });
