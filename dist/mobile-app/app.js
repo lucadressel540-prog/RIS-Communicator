@@ -112,6 +112,7 @@ let preferences = loadPreferences();
 let dataUpdateInProgress = false;
 let stationSearchTimer = 0;
 let editorDownloadUrl = "";
+let editorDownloadTimer = 0;
 
 function buildDateGroups() {
   const now = new Date();
@@ -1105,9 +1106,14 @@ function refreshEditorDownloadLink() {
   }
 
   editorDownloadUrl = URL.createObjectURL(new Blob([
-    `${JSON.stringify(exportTrains, null, 2)}\n`
+    JSON.stringify(exportTrains, null, 2) + "\n"
   ], { type: "application/json" }));
   editorDownloadLink.href = editorDownloadUrl;
+}
+
+function queueEditorDownloadRefresh() {
+  window.clearTimeout(editorDownloadTimer);
+  editorDownloadTimer = window.setTimeout(refreshEditorDownloadLink, 120);
 }
 
 function saveEditor() {
@@ -1318,7 +1324,7 @@ risImportForm.addEventListener("submit", (event) => {
   importRisTimetables();
 });
 
-editorForm.addEventListener("input", refreshEditorDownloadLink);
+editorForm.addEventListener("input", queueEditorDownloadRefresh);
 
 document.addEventListener("change", (event) => {
   const incidentInput = event.target.closest("input[name='incident']");
@@ -1352,6 +1358,7 @@ stationSearch.addEventListener("input", () => {
 stationBoardDateInput.addEventListener("change", () => updateBoardDate(stationBoardDateInput.value));
 stationBoardTimeInput.addEventListener("change", () => updateBoardTime(stationBoardTimeInput.value));
 window.addEventListener("beforeunload", () => {
+  window.clearTimeout(editorDownloadTimer);
   if (editorDownloadUrl) URL.revokeObjectURL(editorDownloadUrl);
 });
 
