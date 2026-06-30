@@ -99,5 +99,18 @@ if ($existingVersion) {
   X-Content-Type-Options: nosniff
 "@ | Set-Content -LiteralPath (Join-Path $target "_headers") -Encoding UTF8
 
+$zipPath = Join-Path $root "dist\mobile-app.zip"
+if (Test-Path $zipPath) {
+    Remove-Item -LiteralPath $zipPath -Force
+}
+Push-Location $target
+try {
+    Compress-Archive -Path * -DestinationPath $zipPath
+} finally {
+    Pop-Location
+}
+
 Write-Host "Mobile Hosting Paket erstellt:" -ForegroundColor Green
 Write-Host $target
+Write-Host "ZIP erstellt:" -ForegroundColor Green
+Write-Host $zipPath
