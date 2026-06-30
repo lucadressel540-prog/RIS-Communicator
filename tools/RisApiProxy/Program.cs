@@ -674,6 +674,54 @@ static async Task<RisDataProbeResult> TryRisDataPost(
     return new RisDataProbeResult(null, null);
 }
 
+static string[] GetRisAutocompletePaths()
+{
+    return new[]
+    {
+        "/api/ris-ipet-data/v1/journey/number/autocomplete",
+        "/api/ris-ipet-data/v1/journey"
+    };
+}
+
+static string[] GetRisJourneyDetailPaths()
+{
+    return new[]
+    {
+        "/api/ris-ipet-data/v1/journey"
+    };
+}
+
+static IEnumerable<KeyValuePair<string, string?>> BuildAutocompleteQuery(RisInfoplattformImportRequest request, string number)
+{
+    yield return new KeyValuePair<string, string?>("number", number);
+    yield return new KeyValuePair<string, string?>("date", DateTime.Now.ToString("yyyy-MM-dd"));
+    yield return new KeyValuePair<string, string?>("onlyDomesticJourneys", "false");
+
+    var administrationId = (request.AdministrationIds ?? Array.Empty<string>())
+        .Where(value => !string.IsNullOrWhiteSpace(value))
+        .Select(value => value.Trim())
+        .FirstOrDefault();
+    if (!string.IsNullOrWhiteSpace(administrationId))
+    {
+        yield return new KeyValuePair<string, string?>("administrationID", administrationId);
+    }
+}
+
+static IReadOnlyList<BrowserAuthAttempt> BuildBrowserAuthAttempts(IReadOnlyList<TokenCandidate> tokenCandidates)
+{
+    var attempts = new List<BrowserAuthAttempt>();
+    foreach (var tokenCandidate in tokenCandidates)
+    {
+        foreach (var authMode in GetRisAuthModes())
+        {
+            attempts.Add(new BrowserAuthAttempt(DescribeTokenCandidate(tokenCandidate), authMode, tokenCandidate.Value));
+        }
+    }
+
+    attempts.Add(new BrowserAuthAttempt("no-token", "None", ""));
+    return attempts;
+}
+
 static string[] GetRisDataOrigins(string appOrigin)
 {
     return new[]
@@ -1249,7 +1297,7 @@ static JsonObject? NormalizeInfoplattformJourney(JsonNode? json)
         return new JsonObject
         {
             ["source"] = "RIS-Infoplattform",
-            ["raw"] = json.DeepClone()
+            ["raw"] = json?.DeepClone()
         };
     }
 
@@ -1285,7 +1333,7 @@ static JsonObject? NormalizeInfoplattformJourney(JsonNode? json)
         ["to"] = last?[0]?.GetValue<string>(),
         ["duration"] = "",
         ["stops"] = stops,
-        ["raw"] = json.DeepClone()
+        ["raw"] = json?.DeepClone()
     };
 }
 
@@ -2205,6 +2253,8 @@ public sealed record RisInfoplattformLoginResult(
 public sealed record RisDataProbeResult(JsonNode? Json, string? Url);
 
 public sealed record BrowserRisImportResult(JsonArray Trains, string[] TestedEndpoints);
+
+public sealed record BrowserAuthAttempt(string Label, string AuthMode, string Token);
 
 public sealed record TokenCandidate(string Source, string Value);
 
