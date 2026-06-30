@@ -44,11 +44,13 @@ const roleText = document.getElementById("roleText");
 const routeScroll = document.getElementById("routeScroll");
 const journeyTitle = document.getElementById("journeyTitle");
 const checkoutButton = document.getElementById("checkoutButton");
+const editorForm = document.getElementById("editorForm");
 const editNumber = document.getElementById("editNumber");
 const editLine = document.getElementById("editLine");
 const editFrom = document.getElementById("editFrom");
 const editTo = document.getElementById("editTo");
 const editStops = document.getElementById("editStops");
+const editorDownloadLink = document.getElementById("editorDownloadLink");
 const profileSetupForm = document.getElementById("profileSetupForm");
 const setupName = document.getElementById("setupName");
 const setupPhone = document.getElementById("setupPhone");
@@ -109,6 +111,7 @@ let profile = loadProfile();
 let preferences = loadPreferences();
 let dataUpdateInProgress = false;
 let stationSearchTimer = 0;
+let editorDownloadUrl = "";
 
 function buildDateGroups() {
   const now = new Date();
@@ -1062,10 +1065,11 @@ function openEditor() {
   editFrom.value = train.from;
   editTo.value = train.to;
   editStops.value = train.stops.map((stop) => stop.join(";")).join("\n");
+  refreshEditorDownloadLink();
   showScreen("editor");
 }
 
-function saveEditor() {
+function buildTrainFromEditor() {
   const number = editNumber.value.trim();
   const line = editLine.value.trim() || "RE";
   const stops = editStops.value.split("\n")
@@ -1076,9 +1080,9 @@ function saveEditor() {
       return [cells[0] || "Halt", cells[1] || "", cells[2] || "", cells[3] || ""];
     });
 
-  if (!number || stops.length < 2) return;
+  if (!number || stops.length < 2) return null;
 
-  const train = {
+  return {
     number,
     line,
     from: editFrom.value.trim() || stops[0][0],
@@ -1086,12 +1090,36 @@ function saveEditor() {
     duration: estimateDuration(stops),
     stops
   };
+}
 
-  trains = trains.filter((item) => item.number !== number);
+function refreshEditorDownloadLink() {
+  if (!editorDownloadLink) return;
+
+  const train = buildTrainFromEditor();
+  const exportTrains = train
+    ? [...trains.filter((item) => item.number !== train.number), train]
+    : trains;
+
+  if (editorDownloadUrl) {
+    URL.revokeObjectURL(editorDownloadUrl);
+  }
+
+  editorDownloadUrl = URL.createObjectURL(new Blob([
+    `${JSON.stringify(exportTrains, null, 2)}\n`
+  ], { type: "application/json" }));
+  editorDownloadLink.href = editorDownloadUrl;
+}
+
+function saveEditor() {
+  const train = buildTrainFromEditor();
+  if (!train) return;
+
+  trains = trains.filter((item) => item.number !== train.number);
   trains.push(train);
   currentTrain = train;
   saveTrains();
-  trainSearch.value = number;
+  refreshEditorDownloadLink();
+  trainSearch.value = train.number;
   showScreen("search");
   renderSearchResult();
 }
@@ -1290,6 +1318,8 @@ risImportForm.addEventListener("submit", (event) => {
   importRisTimetables();
 });
 
+editorForm.addEventListener("input", refreshEditorDownloadLink);
+
 document.addEventListener("change", (event) => {
   const incidentInput = event.target.closest("input[name='incident']");
   if (incidentInput) handleIncidentChoice(incidentInput.value);
@@ -1321,6 +1351,9 @@ stationSearch.addEventListener("input", () => {
 
 stationBoardDateInput.addEventListener("change", () => updateBoardDate(stationBoardDateInput.value));
 stationBoardTimeInput.addEventListener("change", () => updateBoardTime(stationBoardTimeInput.value));
+window.addEventListener("beforeunload", () => {
+  if (editorDownloadUrl) URL.revokeObjectURL(editorDownloadUrl);
+});
 
 function installImageFallbacks() {
   document.addEventListener("error", (event) => {
