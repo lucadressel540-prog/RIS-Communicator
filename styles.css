@@ -1950,6 +1950,14 @@ svg {
   line-height: 1.4;
 }
 
+.editor-download-link {
+  color: #0a5bd3;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .preview-shell {
   display: grid;
   align-content: center;
